@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">YourTicketApp</string>
+    <string name="registrase_con_google">Registrase con Google</string>
+    <string name="email">Email:</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="sing_in">Sing In</string>
+    <string name="password">Password</string>
+    <string name="passwordOption">Password:</string>
+    <string name="login">Login</string>
 </resources>
