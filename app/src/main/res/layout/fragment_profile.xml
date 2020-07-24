@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.gallery.ProfileFragment">
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Your"
+        app:layout_constraintEnd_toEndOf="@+id/textView_name"
+        app:layout_constraintStart_toStartOf="@+id/textView_name"
+        app:layout_constraintTop_toBottomOf="@+id/textView_name" />
+
+    <TextView
+        android:id="@+id/textView_lastname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="LastName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Ticket"
+        app:layout_constraintEnd_toEndOf="@+id/textView_lastname"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_lastname"
+        app:layout_constraintTop_toBottomOf="@+id/textView_lastname" />
+
+    <TextView
+        android:id="@+id/textView_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName5"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName5"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="yourticket@gmail.com"
+        app:layout_constraintEnd_toEndOf="@+id/textView_email"
+        app:layout_constraintStart_toStartOf="@+id/textView_email"
+        app:layout_constraintTop_toBottomOf="@+id/textView_email" />
+
+    <TextView
+        android:id="@+id/textView_birthday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Birthday"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName7"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName7"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="23/07/2020"
+        app:layout_constraintEnd_toEndOf="@+id/textView_birthday"
+        app:layout_constraintStart_toStartOf="@+id/textView_birthday"
+        app:layout_constraintTop_toBottomOf="@+id/textView_birthday" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_baseline_person_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
