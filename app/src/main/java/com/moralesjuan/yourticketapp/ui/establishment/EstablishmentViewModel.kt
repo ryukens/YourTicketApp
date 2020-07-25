@@ -1,13 +1,13 @@
-package com.moralesjuan.yourticketapp.ui.slideshow
+package com.moralesjuan.yourticketapp.ui.establishment
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SlideshowViewModel : ViewModel() {
+class EstablishmentViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is slideshow Fragment"
+        value = "This is establishment Fragment"
     }
     val text: LiveData<String> = _text
 }

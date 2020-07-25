@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/nav_establishments"
-        android:name="com.moralesjuan.yourticketapp.ui.slideshow.SlideshowFragment"
+        android:name="com.moralesjuan.yourticketapp.ui.establishment.EstablishmentFragment"
         android:label="@string/menu_establishments"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/establishment_slideshow" />
 </navigation>
