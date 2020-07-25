@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">YourTicketApp</string>
+    <string name="textViewQRcode_text">QR code</string>
+    <string name="textViewCuponDetails_text">Details</string>
+    <string name="textViewEstablishmentTitle_text">"Establishment:"</string>
+    <string name="textViewDiscountTitle_text">Discount:</string>
+    <string name="textViewDueDateTitle_text">Due Date:</string>
+    <string name="buttonSaveCupon_text">Save Coupon</string>
+    <string name="buttonRemoveFromSaved_text">Remove from Saved</string>
+    <string name="imageViewQRcode_text">QR_code</string>
+    <string name="textViewEstablishment_text">Establishment</string>
+    <string name="imageViewMap_text">Map</string>
+    <string name="textViewEstablishmentCupon_text">Coupon:</string>
+    <string name="imageViewCupon_text">Coupon</string>
+    <string name="buttonBack_text">-</string>
 </resources>
