@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">YourTicketApp</string>
+    <string name="textViewQRcode_text">QR code</string>
+    <string name="textViewCuponDetails_text">Details</string>
+    <string name="textViewEstablishmentTitle_text">"Establishment:"</string>
+    <string name="textViewDiscountTitle_text">Discount:</string>
+    <string name="textViewDueDateTitle_text">Due Date:</string>
+    <string name="buttonSaveCupon_text">Save Coupon</string>
+    <string name="buttonRemoveFromSaved_text">Remove from Saved</string>
+    <string name="imageViewQRcode_text">QR_code</string>
+    <string name="textViewEstablishment_text">Establishment</string>
+    <string name="imageViewMap_text">Map</string>
+    <string name="textViewEstablishmentCupon_text">Coupon:</string>
+    <string name="imageViewCupon_text">Coupon</string>
+    <string name="buttonBack_text">-</string>
     <string name="registrase_con_google">Registrase con Google</string>
     <string name="email">Email:</string>
     <string name="forgot_your_password">Forgot your password?</string>
@@ -7,8 +20,8 @@
     <string name="password">Password</string>
     <string name="passwordOption">Password:</string>
     <string name="login">Login</string>
-    <string name="title_activity_principal">PrincipalActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="title_activity_principal">PrincipalActivity</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Your Ticket</string>
     <string name="nav_header_subtitle">yourticket@android.com</string>
@@ -20,6 +33,6 @@
     <string name="menu_profile">Profile</string>
     <string name="menu_establishments">Establishments</string>
     <string name="menu_log_out">Log Out</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>
