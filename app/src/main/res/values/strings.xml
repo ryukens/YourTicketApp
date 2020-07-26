@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">YourTicketApp</string>
+    <string name="buttonBack_text">-</string>
+    <string name="textViewTitulo_text">Categorías</string>
+    <string name="textViewComida_text">Comida</string>
+    <string name="textViewRopa_text">Ropa</string>
+    <string name="textViewArticulos_text">Artículos</string>
+    <string name="textViewCine_text">Cine</string>
+    <string name="textViewMusica_text">Música</string>
+    <string name="textViewEstable_text">Establecimientos</string>
+    <string name="textViewEstable1_text">Taty</string>
+    <string name="textViewEstable2_text">Etafashion</string>
+    <string name="textViewEstable3_text">Naf Naf</string>
+    <string name="textViewEstable4_text">Forever 21</string>
+    <string name="textViewEstable5_text">Exito</string>
+    <string name="hintCuponesGuar_text">Buscar.....</string>
     <string name="textViewQRcode_text">QR code</string>
     <string name="textViewCuponDetails_text">Details</string>
     <string name="textViewEstablishmentTitle_text">"Establishment:"</string>
