@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Categorias">
-
+    tools:context=".Establecimientos">
 
     <LinearLayout
-        android:id="@+id/linearLayout8"
+        android:id="@+id/linearLayout1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -31,12 +30,12 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewCatego"
+            android:id="@+id/textViewEstable"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/adamina"
-            android:text="@string/textViewTitulo_text"
+            android:text="@string/textViewEstable_text"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -47,12 +46,11 @@
         android:id="@+id/scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout8"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout1"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout1"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,16 +61,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin"
-                android:layout_marginHorizontal="@dimen/marginHorizontal"
-                android:layout_marginVertical="@dimen/marginVertical"
-                android:background="#FFEB3B"
+                android:background="#F4C6D6"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textViewComida"
+                    android:id="@+id/textViewEstable1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/textViewComida_text"
+                    android:text="@string/textViewEstable1_text"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -80,7 +76,7 @@
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="228dp"
-                    app:srcCompat="@drawable/img_comida" />
+                    app:srcCompat="@drawable/img_estable1" />
 
             </LinearLayout>
 
@@ -88,16 +84,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin"
-                android:layout_marginHorizontal="@dimen/marginHorizontal"
-                android:layout_marginVertical="@dimen/marginVertical"
-                android:background="#FFEB3B"
+                android:background="#F4C6D6"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textViewRopa"
+                    android:id="@+id/textViewEstable2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/textViewRopa_text"
+                    android:text="@string/textViewEstable2_text"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -105,21 +99,21 @@
                     android:id="@+id/imageView2"
                     android:layout_width="match_parent"
                     android:layout_height="267dp"
-                    tools:srcCompat="@drawable/img_ropa" />
+                    tools:srcCompat="@drawable/img_estable2" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin"
-                android:background="#FFEB3B"
+                android:background="#F4C6D6"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textViewArticulos"
+                    android:id="@+id/textViewEstable3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/textViewArticulos_text"
+                    android:text="@string/textViewEstable3_text"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -127,7 +121,7 @@
                     android:id="@+id/imageView3"
                     android:layout_width="match_parent"
                     android:layout_height="187dp"
-                    tools:srcCompat="@drawable/img_articulos" />
+                    tools:srcCompat="@drawable/img_estable3" />
 
             </LinearLayout>
 
@@ -135,14 +129,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin"
-                android:background="#FFEB3B"
+                android:background="#F4C6D6"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textViewCine"
+                    android:id="@+id/textViewEstable4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/textViewCine_text"
+                    android:text="@string/textViewEstable4_text"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -150,21 +144,21 @@
                     android:id="@+id/imageView4"
                     android:layout_width="match_parent"
                     android:layout_height="204dp"
-                    tools:srcCompat="@drawable/img_cine" />
+                    tools:srcCompat="@drawable/img_estable4" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin"
-                android:background="#FFEB3B"
+                android:background="#F4C6D6"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textViewMusica"
+                    android:id="@+id/textViewEstable5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/textViewMusica_text"
+                    android:text="@string/textViewEstable5_text"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -172,11 +166,10 @@
                     android:id="@+id/imageView5"
                     android:layout_width="match_parent"
                     android:layout_height="195dp"
-                    tools:srcCompat="@drawable/img_musica" />
+                    tools:srcCompat="@drawable/img_estable5" />
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
