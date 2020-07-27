@@ -7,19 +7,27 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.moralesjuan.yourticketapp.ui.home.HomeFragment"
+        android:name="com.moralesjuan.yourticketapp.InicioFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_inicio" />
 
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.moralesjuan.yourticketapp.ui.gallery.ProfileFragment"
+        android:name="com.moralesjuan.yourticketapp.PerfilFragment"
         android:label="@string/menu_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_perfil" />
 
     <fragment
-        android:id="@+id/nav_establishments"
-        android:name="com.moralesjuan.yourticketapp.ui.establishment.EstablishmentFragment"
+        android:id="@+id/nav_categorias"
+        android:name="com.moralesjuan.yourticketapp.CategoriasFragment"
         android:label="@string/menu_establishments"
-        tools:layout="@layout/establishment_slideshow" />
+        tools:layout="@layout/fragment_categorias" />
+
+    <fragment
+        android:id="@+id/nav_cupones_guardados"
+        android:name="com.moralesjuan.yourticketapp.CuponesGuardadosFragment"
+        android:label="@string/menu_cupones_guardados"
+        tools:layout="@layout/fragment_cupones_guardados" />
+
+
 </navigation>

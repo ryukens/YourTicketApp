@@ -2,8 +2,6 @@ package com.moralesjuan.yourticketapp
 
 import android.os.Bundle
 import android.view.Menu
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.navigateUp
@@ -36,7 +34,7 @@ class PrincipalActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration1(
             setOf(
-                R.id.nav_home, R.id.nav_profile, R.id.nav_establishments
+                R.id.nav_home, R.id.nav_profile, R.id.nav_categorias, R.id.nav_cupones_guardados
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

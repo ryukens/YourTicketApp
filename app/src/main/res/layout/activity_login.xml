@@ -2,13 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/buttonRegistraseGoogle"
+    android:id="@+id/activity_login_xml"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_Google"
         android:layout_width="309dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -27,8 +27,8 @@
         android:layout_marginTop="16dp"
         android:text="@string/email"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/button_Google"
+        app:layout_constraintTop_toBottomOf="@+id/button_Google" />
 
     <EditText
         android:id="@+id/editTextEmail"
@@ -66,7 +66,7 @@
         android:autofillHints="" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView_Est_Taty"
         android:layout_width="358dp"
         android:layout_height="180dp"
         android:layout_marginStart="4dp"
@@ -76,10 +76,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/ic_ticket" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_Login"
         android:layout_width="308dp"
         android:layout_height="47dp"
         android:layout_marginStart="16dp"
@@ -89,29 +89,29 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_Est_Taty" />
 
-    <TextView
+    <Button
         android:id="@+id/buttonRestartPassword"
         android:layout_width="201dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/forgot_your_password"
         android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/button_Login"
+        app:layout_constraintTop_toBottomOf="@+id/button_Login" />
 
-    <TextView
-        android:id="@+id/textView4"
+    <Button
+        android:id="@+id/button_registrarse"
         android:layout_width="62dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/sing_in"
         android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/button_Login"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/buttonRestartPassword"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Login" />
 </androidx.constraintlayout.widget.ConstraintLayout>
