@@ -17,9 +17,9 @@ class InformacionDelCuponFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_informacion_del_cupon, container, false)
-        val buttonSaveCupon: Button = root.findViewById<Button>(R.id.buttonSaveCupon)
-        buttonSaveCupon.setOnClickListener(){
-            Toast.makeText( buttonSaveCupon.context , "@string/text_CuponSaved", Toast.LENGTH_LONG).show()
+        val buttonSaveCupon: Button = root.findViewById(R.id.buttonSaveCupon)
+        buttonSaveCupon.setOnClickListener() {
+            Toast.makeText(buttonSaveCupon.context, "Coupon Saved", Toast.LENGTH_LONG).show()
         }
         return root
     }

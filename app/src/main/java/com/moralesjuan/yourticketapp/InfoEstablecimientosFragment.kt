@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.fragment_informacion_del_cupon.*
 
 class InfoEstablecimientosFragment : Fragment() {
 
@@ -22,6 +24,7 @@ class InfoEstablecimientosFragment : Fragment() {
             transaction.add(R.id.fragment_informacion_establecimiento_xml, nuevoFragmento)
             transaction.addToBackStack(null)
             transaction.commit()
+
         }
         return root
     }
