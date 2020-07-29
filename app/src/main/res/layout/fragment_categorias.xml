@@ -2,12 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_categorias_xml"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Establecimientos">
+    tools:context=".CategoriasFragment">
+
 
     <LinearLayout
-        android:id="@+id/linearLayout1"
+        android:id="@+id/linearLayout8"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -30,12 +32,12 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewEstable"
+            android:id="@+id/textViewCatego"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/adamina"
-            android:text="@string/textViewEstable_text"
+            android:text="@string/textViewTitulo_text"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -46,11 +48,12 @@
         android:id="@+id/scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout1"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout1"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout8"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,24 +62,24 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin"
-                android:background="#F4C6D6"
+                android:background="#FFEB3B"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textViewEstable1"
+                    android:id="@+id/textViewComida"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/textViewEstable1_text"
+                    android:text="@string/textViewComida_text"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/imageView_Cat_Comida"
                     android:layout_width="match_parent"
                     android:layout_height="228dp"
-                    app:srcCompat="@drawable/img_estable1" />
+                    android:src="@drawable/img_comida" />
 
             </LinearLayout>
 
@@ -84,44 +87,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin"
-                android:background="#F4C6D6"
+                android:background="#FFEB3B"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textViewEstable2"
+                    android:id="@+id/textViewRopa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/textViewEstable2_text"
+                    android:text="@string/textViewRopa_text"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/imageView_Cat_Ropa"
                     android:layout_width="match_parent"
                     android:layout_height="267dp"
-                    tools:srcCompat="@drawable/img_estable2" />
+                    android:src="@drawable/img_ropa" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin"
-                android:background="#F4C6D6"
+                android:background="#FFEB3B"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textViewEstable3"
+                    android:id="@+id/textViewArticulos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/textViewEstable3_text"
+                    android:text="@string/textViewArticulos_text"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/imageView_Cat_Articulos"
                     android:layout_width="match_parent"
                     android:layout_height="187dp"
-                    tools:srcCompat="@drawable/img_estable3" />
+                    android:src="@drawable/img_articulos" />
 
             </LinearLayout>
 
@@ -129,47 +132,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin"
-                android:background="#F4C6D6"
+                android:background="#FFEB3B"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textViewEstable4"
+                    android:id="@+id/textViewCine"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/textViewEstable4_text"
+                    android:text="@string/textViewCine_text"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/imageView_Cat_Cine"
                     android:layout_width="match_parent"
                     android:layout_height="204dp"
-                    tools:srcCompat="@drawable/img_estable4" />
+                    android:src="@drawable/img_cine" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin"
-                android:background="#F4C6D6"
+                android:background="#FFEB3B"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textViewEstable5"
+                    android:id="@+id/textViewMusica"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/textViewEstable5_text"
+                    android:text="@string/textViewMusica_text"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/imageView_Cat_Musica"
                     android:layout_width="match_parent"
                     android:layout_height="195dp"
-                    tools:srcCompat="@drawable/img_estable5" />
+                    android:src="@drawable/img_musica" />
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
