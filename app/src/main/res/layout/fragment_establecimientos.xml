@@ -5,6 +5,7 @@
     android:id="@+id/fragment_establecimientos_xml"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".EstablecimientosFragment">
 
     <LinearLayout
@@ -14,7 +15,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@android:color/darker_gray"
+        android:background="@color/colorSecundary5"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,6 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
             android:text="@string/buttonBack_text"
             android:textColor="@android:color/black"
             android:textSize="18sp"
@@ -38,6 +40,7 @@
             android:fontFamily="@font/adamina"
             android:text="@string/textViewEstablecimiento_text"
             android:textAlignment="center"
+            android:textColor="@android:color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -61,8 +64,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:background="#F4C6D6"
+                android:layout_margin="8dp"
+                android:background="@color/colorSecundary3"
                 android:orientation="vertical">
 
                 <TextView
@@ -70,6 +73,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstable1_text"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -84,8 +88,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:background="#F4C6D6"
+                android:layout_margin="8dp"
+                android:background="@color/colorSecundary3"
                 android:orientation="vertical">
 
                 <TextView
@@ -93,6 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstable2_text"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -107,8 +112,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:background="#F4C6D6"
+                android:layout_margin="8dp"
+                android:background="@color/colorSecundary3"
                 android:orientation="vertical">
 
                 <TextView
@@ -116,6 +121,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstable3_text"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -130,8 +136,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:background="#F4C6D6"
+                android:layout_margin="8dp"
+                android:background="@color/colorSecundary3"
                 android:orientation="vertical">
 
                 <TextView
@@ -139,6 +145,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstable4_text"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -153,8 +160,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:background="#F4C6D6"
+                android:layout_margin="8dp"
+                android:background="@color/colorSecundary3"
                 android:orientation="vertical">
 
                 <TextView
@@ -162,6 +169,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstable5_text"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 

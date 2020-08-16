@@ -5,6 +5,7 @@
     android:id="@+id/fragment_informacion_cupon_xml"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
     tools:context=".InformacionDelCuponFragment">
 
     <ScrollView
@@ -23,7 +24,10 @@
                 android:id="@+id/linearLayout8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorSecundary5"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +36,7 @@
                 <Button
                     android:id="@+id/buttonBackCoupon"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/buttonBack_text"
                     android:textColor="@android:color/black"
@@ -40,10 +44,17 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/textViewCoupon"
                     android:layout_width="350dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/adamina"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:text="@string/textViewCoupon_text" />
             </LinearLayout>
 
             <LinearLayout
@@ -51,7 +62,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-                android:background="#FF7272"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorSecundary3"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
                 app:layout_constraintStart_toStartOf="@+id/linearLayout8"
@@ -69,7 +83,10 @@
                 android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorSecundary3"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayout1"
                 app:layout_constraintStart_toStartOf="@+id/linearLayout1"
@@ -80,7 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewQRcode_text"
-                    android:textColor="@android:color/background_dark"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -101,7 +118,10 @@
                 android:id="@+id/linearLayout3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorSecundary3"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
                 app:layout_constraintStart_toStartOf="@+id/linearLayout2"
@@ -112,7 +132,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewCuponDetails_text"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     tools:text="@string/textViewCuponDetails_text" />
@@ -122,7 +142,9 @@
                 android:id="@+id/linearLayout4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorSecundary3"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
                 app:layout_constraintStart_toStartOf="@+id/linearLayout3"
@@ -134,7 +156,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/textViewEstablishmentTitle_text"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
                     android:textSize="14sp" />
 
                 <TextView
@@ -142,7 +164,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -150,7 +172,9 @@
                 android:id="@+id/linearLayout5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorSecundary3"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
                 app:layout_constraintStart_toStartOf="@+id/linearLayout4"
@@ -162,7 +186,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/textViewDiscountTitle_text"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
                     android:textSize="14sp" />
 
                 <TextView
@@ -170,7 +194,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -178,7 +202,9 @@
                 android:id="@+id/linearLayout6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorSecundary3"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
                 app:layout_constraintStart_toStartOf="@+id/linearLayout5"
@@ -190,7 +216,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/textViewDueDateTitle_text"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
                     android:textSize="14sp" />
 
                 <TextView
@@ -198,7 +224,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -206,7 +232,11 @@
                 android:id="@+id/linearLayoutSave"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimaryDark"
                 android:orientation="vertical"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -219,27 +249,29 @@
                     android:id="@+id/buttonSaveCupon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/buttonSaveCupon_text" />
+                    android:background="@color/colorPrimaryDark"
+                    android:text="@string/buttonSaveCupon_text"
+                    android:textColor="@android:color/white" />
             </LinearLayout>
 
-<!--            <LinearLayout-->
-<!--                android:id="@+id/linearLayoutRemoveFromSaved"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:background="@android:color/darker_gray"-->
-<!--                android:orientation="vertical"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="@+id/linearLayoutSave"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/linearLayoutSave"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/linearLayout6"-->
-<!--                tools:visibility="gone">-->
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/linearLayoutRemoveFromSaved"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:background="@android:color/darker_gray"-->
+            <!--                android:orientation="vertical"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="@+id/linearLayoutSave"-->
+            <!--                app:layout_constraintStart_toStartOf="@+id/linearLayoutSave"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/linearLayout6"-->
+            <!--                tools:visibility="gone">-->
 
-<!--                <Button-->
-<!--                    android:id="@+id/buttonRemoveFromSaved"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="@string/buttonRemoveFromSaved_text" />-->
-<!--            </LinearLayout>-->
+            <!--                <Button-->
+            <!--                    android:id="@+id/buttonRemoveFromSaved"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="@string/buttonRemoveFromSaved_text" />-->
+            <!--            </LinearLayout>-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

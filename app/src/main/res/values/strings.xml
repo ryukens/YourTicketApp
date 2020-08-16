@@ -49,5 +49,7 @@
     <string name="menu_cupones_guardados">Saved Coupons</string>
     <string name="menu_log_out">Log Out</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textViewLocation_text">Location</string>
+    <string name="textViewCoupon_text">Coupon</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
