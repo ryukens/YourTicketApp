@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_informacion_establecimiento_xml"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoEstablecimientosFragment">
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:context=".EstablecimientosActivity">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:id="@+id/linearLayoutEstablishment"
@@ -47,7 +56,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout1"
+                android:id="@+id/linearLayout8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
@@ -73,12 +82,10 @@
                 android:id="@+id/linearLayout2"
                 android:layout_width="220dp"
                 android:layout_height="220dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
                 android:background="#FF8686"
                 android:orientation="vertical"
-                app:layout_constraintStart_toStartOf="@+id/linearLayout1"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+                app:layout_constraintStart_toStartOf="@+id/linearLayout8"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
 
                 <TextView
                     android:id="@+id/textViewCupon1"
@@ -104,7 +111,7 @@
                 android:background="#FD9999"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout1"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
                 app:layout_constraintStart_toEndOf="@+id/linearLayout2"
                 app:layout_constraintTop_toTopOf="@+id/linearLayout2">
 
@@ -129,9 +136,6 @@
                 android:id="@+id/linearLayout4"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
                 android:background="#FF8F8F"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -155,6 +159,7 @@
                     android:contentDescription="@string/imageViewCupon_text"
                     app:srcCompat="@drawable/img_cupon2" />
             </LinearLayout>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
