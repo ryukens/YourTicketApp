@@ -5,6 +5,7 @@
     android:id="@+id/activity_login_xml"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".LoginActivity">
 
     <Button
@@ -14,6 +15,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:background="@color/colorSecundary2"
         android:text="@string/registrase_con_google"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,13 +59,13 @@
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="313dp"
         android:layout_height="44dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/password"
         app:layout_constraintEnd_toEndOf="@+id/editTextEmail"
         app:layout_constraintStart_toStartOf="@+id/tVPassword"
-        app:layout_constraintTop_toBottomOf="@+id/tVPassword"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/tVPassword" />
 
     <ImageView
         android:id="@+id/imageView_Est_Taty"
@@ -85,6 +87,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:background="@color/colorSecundary2"
         android:text="@string/login"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,6 +99,7 @@
         android:layout_width="201dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@color/colorSecundary2"
         android:text="@string/forgot_your_password"
         android:textColor="@color/colorPrimary"
         android:textSize="10sp"
@@ -107,6 +111,7 @@
         android:layout_width="62dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@color/colorSecundary2"
         android:text="@string/sing_in"
         android:textColor="@color/colorPrimary"
         android:textSize="10sp"

@@ -5,6 +5,7 @@
     android:id="@+id/fragment_categorias_xml"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".CategoriasFragment">
 
 
@@ -15,7 +16,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@android:color/darker_gray"
+        android:background="@color/colorSecundary2"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin"
-                android:background="#FFEB3B"
+                android:background="@color/colorSecundary2"
                 android:orientation="vertical">
 
                 <TextView
@@ -87,7 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin"
-                android:background="#FFEB3B"
+                android:background="@color/colorSecundary2"
                 android:orientation="vertical">
 
                 <TextView
@@ -109,7 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin"
-                android:background="#FFEB3B"
+                android:background="@color/colorSecundary2"
                 android:orientation="vertical">
 
                 <TextView
@@ -132,7 +133,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin"
-                android:background="#FFEB3B"
+                android:background="@color/colorSecundary2"
                 android:orientation="vertical">
 
                 <TextView
@@ -154,7 +155,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin"
-                android:background="#FFEB3B"
+                android:background="@color/colorSecundary2"
                 android:orientation="vertical">
 
                 <TextView
