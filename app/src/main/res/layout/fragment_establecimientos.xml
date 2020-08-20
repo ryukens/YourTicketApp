@@ -5,7 +5,8 @@
     android:id="@+id/fragment_establecimientos_xml"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EstablecimientosFragment">
+    tools:context=".EstablecimientosFragment"
+    android:background="@color/colorJuanci">
 
     <LinearLayout
         android:id="@+id/linearLayout8"
@@ -14,11 +15,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@android:color/darker_gray"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorJuanci2">
 
         <Button
             android:id="@+id/buttonBackCoupon"
@@ -27,6 +28,7 @@
             android:layout_weight="1"
             android:text="@string/buttonBack_text"
             android:textColor="@android:color/black"
+            android:background="@color/colorbotones2"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -71,13 +73,16 @@
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstable1_text"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@color/colorProbando"
+                    android:textColor="@color/colorJuanci"/>
 
                 <ImageView
                     android:id="@+id/imageView_Est_Taty"
                     android:layout_width="match_parent"
                     android:layout_height="228dp"
-                    android:src="@drawable/img_estable1" />
+                    android:src="@drawable/img_estable1"
+                    android:background="@color/colorProbando2"/>
 
             </LinearLayout>
 
@@ -94,13 +99,16 @@
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstable2_text"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@color/colorProbando"
+                    android:textColor="@color/colorJuanci"/>
 
                 <ImageView
                     android:id="@+id/imageView_Est_Etafa"
                     android:layout_width="match_parent"
                     android:layout_height="267dp"
-                    android:src="@drawable/img_estable2" />
+                    android:src="@drawable/img_estable2"
+                    android:background="@color/colorProbando2"/>
 
             </LinearLayout>
 
@@ -117,13 +125,16 @@
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstable3_text"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@color/colorProbando"
+                    android:textColor="@color/colorJuanci"/>
 
                 <ImageView
                     android:id="@+id/imageView_Est_Naf"
                     android:layout_width="match_parent"
                     android:layout_height="187dp"
-                    android:src="@drawable/img_estable3" />
+                    android:src="@drawable/img_estable3"
+                    android:background="@color/colorProbando2"/>
 
             </LinearLayout>
 
@@ -140,13 +151,17 @@
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstable4_text"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@color/colorProbando"
+                    android:textColor="@color/colorJuanci"/>
 
                 <ImageView
                     android:id="@+id/imageView_Est_Forever"
                     android:layout_width="match_parent"
                     android:layout_height="204dp"
-                    android:src="@drawable/img_estable4" />
+                    android:src="@drawable/img_estable4"
+                    android:background="@color/colorProbando2"
+                    />
 
             </LinearLayout>
 
@@ -163,13 +178,16 @@
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstable5_text"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@color/colorProbando"
+                    android:textColor="@color/colorJuanci"/>
 
                 <ImageView
                     android:id="@+id/imageView_Est_Super"
                     android:layout_width="match_parent"
                     android:layout_height="195dp"
-                    android:src="@drawable/img_estable5" />
+                    android:src="@drawable/img_estable5"
+                    android:background="@color/colorProbando2"/>
             </LinearLayout>
 
         </LinearLayout>

@@ -5,7 +5,8 @@
     android:id="@+id/activity_login_xml"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@color/colorJuanci">
 
     <Button
         android:id="@+id/button_Google"
@@ -18,7 +19,10 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorbotones2"
+        android:textColor="@color/colorPrimaryDark"/>
+
 
     <TextView
         android:id="@+id/tVEmail"
@@ -76,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-        app:srcCompat="@drawable/ic_ticket" />
+        app:srcCompat="@drawable/logoapp" />
 
     <Button
         android:id="@+id/button_Login"
@@ -89,7 +93,9 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_Est_Taty" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_Est_Taty"
+        android:background="@color/colorbotones2"
+        android:textColor="@color/colorPrimaryDark"/>
 
     <Button
         android:id="@+id/buttonRestartPassword"
@@ -97,10 +103,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/forgot_your_password"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="@+id/button_Login"
-        app:layout_constraintTop_toBottomOf="@+id/button_Login" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Login"
+        android:background="@color/colorbotones"/>
 
     <Button
         android:id="@+id/button_registrarse"
@@ -108,10 +115,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/sing_in"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="@+id/button_Login"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/buttonRestartPassword"
-        app:layout_constraintTop_toBottomOf="@+id/button_Login" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Login"
+        android:background="@color/colorbotones"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

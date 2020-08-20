@@ -5,7 +5,8 @@
     android:id="@+id/fragment_categorias_xml"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CategoriasFragment">
+    tools:context=".CategoriasFragment"
+    android:background="@color/colorJuanci">
 
 
     <LinearLayout
@@ -15,7 +16,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@android:color/darker_gray"
+        android:background="@color/colorJuanci2"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,6 +29,7 @@
             android:layout_weight="1"
             android:text="@string/buttonBack_text"
             android:textColor="@android:color/black"
+            android:background="@color/colorbotones2"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -40,7 +42,8 @@
             android:text="@string/textViewTitulo_text"
             android:textAlignment="center"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"/>
 
     </LinearLayout>
 

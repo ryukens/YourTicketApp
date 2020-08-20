@@ -5,7 +5,8 @@
     android:id="@+id/fragment_informacion_cupon_xml"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".InformacionDelCuponFragment">
+    tools:context=".InformacionDelCuponFragment"
+    android:background="@color/colorJuanci2">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -23,7 +24,7 @@
                 android:id="@+id/linearLayout8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"
+                android:background="@color/colorJuanci2"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +37,7 @@
                     android:layout_weight="1"
                     android:text="@string/buttonBack_text"
                     android:textColor="@android:color/black"
+                    android:background="@color/colorbotones2"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -62,7 +64,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="308dp"
                     android:contentDescription="@string/imageViewCupon_text"
-                    app:srcCompat="@drawable/img_cupon" />
+                    app:srcCompat="@drawable/img_cupon"
+                    android:background="@color/paleta2"/>
             </LinearLayout>
 
             <LinearLayout
@@ -80,7 +83,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewQRcode_text"
-                    android:textColor="@android:color/background_dark"
+                    android:background="@color/paleta1"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -89,12 +93,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/imageViewQRcode_text"
-                    app:srcCompat="@drawable/img_codeqr" />
+                    app:srcCompat="@drawable/img_codeqr"
+                    android:background="@color/paleta2"
+                    />
 
                 <TextView
                     android:id="@+id/textViewBlank"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:background="@color/paleta2"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -112,10 +120,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewCuponDetails_text"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
+                    android:background="@color/paleta1"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    tools:text="@string/textViewCuponDetails_text" />
+                    tools:text="@string/textViewCuponDetails_text"
+                     />
             </LinearLayout>
 
             <LinearLayout
@@ -134,7 +144,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/textViewEstablishmentTitle_text"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
+                    android:background="@color/paleta1"
                     android:textSize="14sp" />
 
                 <TextView
@@ -142,7 +153,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
+                    android:background="@color/paleta1"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -162,7 +174,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/textViewDiscountTitle_text"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
+                    android:background="@color/paleta1"
                     android:textSize="14sp" />
 
                 <TextView
@@ -170,7 +183,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
+                    android:background="@color/paleta1"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -190,7 +204,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/textViewDueDateTitle_text"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
+                    android:background="@color/paleta1"
                     android:textSize="14sp" />
 
                 <TextView
@@ -198,7 +213,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
+                    android:background="@color/paleta1"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -219,7 +235,9 @@
                     android:id="@+id/buttonSaveCupon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/buttonSaveCupon_text" />
+                    android:text="@string/buttonSaveCupon_text"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:background="@color/colorbotones2"/>
             </LinearLayout>
 
 <!--            <LinearLayout-->

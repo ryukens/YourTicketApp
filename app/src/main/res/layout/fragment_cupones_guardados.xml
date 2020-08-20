@@ -5,7 +5,8 @@
     android:id="@+id/fragment_cupones_guardados_xml"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CuponesGuardadosFragment">
+    tools:context=".CuponesGuardadosFragment"
+    android:background="@color/colorJuanci2">
 
     <LinearLayout
         android:id="@+id/linearLayout8"
@@ -14,7 +15,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@android:color/darker_gray"
+        android:background="@color/colorJuanci2"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,17 +28,20 @@
             android:layout_weight="1"
             android:text="@string/buttonBack_text"
             android:textColor="@android:color/black"
+            android:background="@color/colorbotones2"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
+            android:textColor="@color/colorPrimaryDark"
             android:id="@+id/editTextTextPersonName"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:hint="@string/hintCuponesGuar_text"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            />
 
     </LinearLayout>
 
@@ -54,7 +58,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/colorFondo">
 
 
             <LinearLayout

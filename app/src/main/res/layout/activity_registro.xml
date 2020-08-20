@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistroActivity">
+    tools:context=".RegistroActivity"
+    android:background="@color/colorJuanci">
 
     <ImageView
         android:id="@+id/imageView_Cat_Ropa"
@@ -80,6 +81,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView"
@@ -94,6 +96,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Lastname"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView2"
@@ -108,6 +111,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Email"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView3"
@@ -122,6 +126,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Password"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -135,6 +140,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Password"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -159,7 +165,10 @@
         android:text="@string/sing_in"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDateBirth" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDateBirth"
+        android:background="@color/colorbotones2"
+        android:textColor="@color/colorPrimaryDark"
+        />
 
     <EditText
         android:id="@+id/editTextDateBirth"
@@ -170,6 +179,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="dd/mm/yyyy"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />

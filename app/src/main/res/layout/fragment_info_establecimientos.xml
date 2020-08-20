@@ -5,7 +5,8 @@
     android:id="@+id/fragment_informacion_establecimiento_xml"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InfoEstablecimientosFragment">
+    tools:context=".InfoEstablecimientosFragment"
+    android:background="@color/paleta1">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -51,7 +52,8 @@
                     android:text="@string/textViewEstablishment_text"
                     android:textColor="@android:color/white"
                     android:textSize="36sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@color/paleta2"/>
 
             </LinearLayout>
 
@@ -74,7 +76,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:contentDescription="@string/imageViewMap_text"
-                    app:srcCompat="@drawable/img_map_city" />
+                    app:srcCompat="@drawable/img_map_city"
+                    android:background="@color/paleta1"/>
 
             </LinearLayout>
 
@@ -92,16 +95,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstablishmentCupon_text"
-                    android:textColor="@android:color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@color/paleta4"
+                    android:textColor="@color/colorJuanci"
+                    />
 
                 <ImageView
                     android:id="@+id/imageViewCupon1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/imageViewCupon_text"
-                    app:srcCompat="@drawable/img_cupon" />
+                    app:srcCompat="@drawable/img_cupon"
+                    android:background="@color/colorProbando"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -120,7 +127,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstablishmentCupon_text"
-                    android:textColor="@android:color/black"
+                    android:background="@color/paleta4"
+                    android:textColor="@color/colorJuanci"
+
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -129,7 +138,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/imageViewCupon_text"
-                    app:srcCompat="@drawable/img_cupon3" />
+                    app:srcCompat="@drawable/img_cupon3"
+                    android:background="@color/colorProbando"/>
             </LinearLayout>
 
             <LinearLayout
@@ -148,7 +158,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstablishmentCupon_text"
-                    android:textColor="@android:color/black"
+                    android:background="@color/paleta4"
+                    android:textColor="@color/colorJuanci"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -157,7 +168,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/imageViewCupon_text"
-                    app:srcCompat="@drawable/img_cupon2" />
+                    app:srcCompat="@drawable/img_cupon2"
+                    android:background="@color/colorProbando"/>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
