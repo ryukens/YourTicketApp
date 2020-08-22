@@ -8,7 +8,6 @@
     android:background="@color/colorPrimary"
     tools:context=".CategoriasFragment">
 
-
     <LinearLayout
         android:id="@+id/linearLayout8"
         android:layout_width="0dp"
@@ -45,136 +44,17 @@
 
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/scrollView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCategoria"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/linearLayout8"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/margin"
-                android:background="@color/colorSecundary2"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textViewComida"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/textViewComida_text"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imageView_Cat_Comida"
-                    android:layout_width="match_parent"
-                    android:layout_height="228dp"
-                    android:src="@drawable/img_comida" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/margin"
-                android:background="@color/colorSecundary2"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textViewRopa"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/textViewRopa_text"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imageView_Cat_Ropa"
-                    android:layout_width="match_parent"
-                    android:layout_height="267dp"
-                    android:src="@drawable/img_ropa" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/margin"
-                android:background="@color/colorSecundary2"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textViewArticulos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/textViewArticulos_text"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imageView_Cat_Articulos"
-                    android:layout_width="match_parent"
-                    android:layout_height="187dp"
-                    android:src="@drawable/img_articulos" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/margin"
-                android:background="@color/colorSecundary2"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textViewCine"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/textViewCine_text"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imageView_Cat_Cine"
-                    android:layout_width="match_parent"
-                    android:layout_height="204dp"
-                    android:src="@drawable/img_cine" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/margin"
-                android:background="@color/colorSecundary2"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textViewMusica"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/textViewMusica_text"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imageView_Cat_Musica"
-                    android:layout_width="match_parent"
-                    android:layout_height="195dp"
-                    android:src="@drawable/img_musica" />
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
+        app:layout_constraintVertical_bias="0.496" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
