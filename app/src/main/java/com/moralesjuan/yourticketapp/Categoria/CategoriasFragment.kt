@@ -1,4 +1,4 @@
-package com.moralesjuan.yourticketapp
+package com.moralesjuan.yourticketapp.Categoria
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
+import com.moralesjuan.yourticketapp.R
+
 
 class CategoriasFragment : Fragment() {
 
@@ -24,6 +26,7 @@ class CategoriasFragment : Fragment() {
         var root = inflater.inflate(R.layout.fragment_categorias, container, false)
 
         root = cargarLista(root)
+        //cargarEstablecimientos(root)
 
 //        val ImageView_Cat_Comida: ImageView = root.findViewById(R.id.imageView_Cat_Comida)
 //        val ImageView_Cat_Ropa: ImageView = root.findViewById(R.id.imageView_Cat_Ropa)
@@ -55,7 +58,12 @@ class CategoriasFragment : Fragment() {
                     Toast.LENGTH_SHORT
                 ).show()
 
-                categoriaAdapter = CategoriaAdapter(listaCategorias, R.layout.row_categoria)
+                categoriaAdapter =
+                    CategoriaAdapter(
+                        this,
+                        listaCategorias,
+                        R.layout.row_categoria
+                    )
                 recyclerViewCategoria = root.findViewById(R.id.recyclerViewCategoria)
                 recyclerViewCategoria.layoutManager = LinearLayoutManager(context)
                 recyclerViewCategoria.adapter = categoriaAdapter
