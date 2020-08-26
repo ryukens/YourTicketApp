@@ -37,6 +37,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
                     android:text="@string/buttonBack_text"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
@@ -44,13 +45,14 @@
 
                 <TextView
                     android:id="@+id/textViewEstablishmentTitle"
-                    android:layout_width="430dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-smallcaps"
+                    android:layout_width="350dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/adamina"
                     android:gravity="center"
                     android:text="@string/textViewEstablishment_text"
+                    android:textAlignment="center"
                     android:textColor="@android:color/white"
-                    android:textSize="36sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -68,10 +70,19 @@
                 app:layout_constraintStart_toStartOf="@+id/linearLayoutEstablishment"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutEstablishment">
 
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:text="@string/textViewLocation_text"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
                 <ImageView
                     android:id="@+id/imageViewMap"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
                     android:contentDescription="@string/imageViewMap_text"
                     app:srcCompat="@drawable/img_map_city" />
@@ -84,6 +95,7 @@
                 android:layout_height="220dp"
                 android:background="@color/colorSecundary2"
                 android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/linearLayout8"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
 
@@ -92,8 +104,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstablishmentCupon_text"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -148,8 +160,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstablishmentCupon_text"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <ImageView
