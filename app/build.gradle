@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -31,6 +32,11 @@ android {
     }
 }
 
+repositories {
+    google()
+    jcenter()
+}
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -44,8 +50,12 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
+    implementation 'androidx.security:security-crypto:1.1.0-alpha02'
+    implementation 'com.google.firebase:firebase-firestore:21.5.0'
     testImplementation 'junit:junit:4.12'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
 }

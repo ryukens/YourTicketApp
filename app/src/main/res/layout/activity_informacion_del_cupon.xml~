@@ -1,253 +1,259 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    tools:context=".InformacionDelCuponActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context=".InformacionDelCuponActivity">
+        android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/linearLayout8"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@android:color/darker_gray"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/buttonBackCoupon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/buttonBack_text"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="#FF7272"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout8"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
-
-            <ImageView
-                android:id="@+id/imageViewCupon1"
+            <LinearLayout
+                android:id="@+id/linearLayout8"
                 android:layout_width="match_parent"
-                android:layout_height="308dp"
-                android:contentDescription="@string/imageViewCupon_text"
-                app:srcCompat="@drawable/img_cupon" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@android:color/darker_gray"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout1"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout1"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+                <Button
+                    android:id="@+id/buttonBackCoupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/buttonBack_text"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textViewQRcode"
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/textViewQRcode_text"
-                android:textColor="@android:color/background_dark"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="#FF7272"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout8"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
 
-            <ImageView
-                android:id="@+id/imageViewQRcode"
+                <ImageView
+                    android:id="@+id/imageViewCupon1"
+                    android:layout_width="match_parent"
+                    android:layout_height="308dp"
+                    android:contentDescription="@string/imageViewCupon_text"
+                    app:srcCompat="@drawable/img_cupon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/imageViewQRcode_text"
-                app:srcCompat="@drawable/img_QRcode" />
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout1"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout1"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
 
-            <TextView
-                android:id="@+id/textViewBlank"
+                <TextView
+                    android:id="@+id/textViewQRcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textViewQRcode_text"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageViewQRcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/imageViewQRcode_text"
+                    app:srcCompat="@drawable/img_QRcode" />
+
+                <TextView
+                    android:id="@+id/textViewBlank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@android:color/darker_gray"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+                <TextView
+                    android:id="@+id/textViewCuponDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textViewCuponDetails_text"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:text="@string/textViewCuponDetails_text" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/textViewCuponDetails"
+            <LinearLayout
+                android:id="@+id/linearLayout4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/textViewCuponDetails_text"
-                android:textColor="@android:color/black"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                tools:text="@string/textViewCuponDetails_text" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-        <LinearLayout
-            android:id="@+id/linearLayout4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@android:color/darker_gray"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout3"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+                <TextView
+                    android:id="@+id/textViewEstablishmentTitle"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/textViewEstablishmentTitle_text"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/textViewEstablishmentTitle"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/textViewEstablishmentTitle_text"
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/textViewEstablishmentValue"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/textViewEstablishmentValue"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout5"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@android:color/darker_gray"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout4"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
-
-            <TextView
-                android:id="@+id/textViewDiscountTitle"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/textViewDiscountTitle_text"
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/textViewDiscountValue"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout6"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@android:color/darker_gray"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout5"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
-
-            <TextView
-                android:id="@+id/textViewDueDateTitle"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/textViewDueDateTitle_text"
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/textViewDueDateValue"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayoutSave"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:orientation="vertical"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout6"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
-            tools:visibility="visible">
-
-            <Button
-                android:id="@+id/buttonSaveCupon"
+            <LinearLayout
+                android:id="@+id/linearLayout5"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/buttonSaveCupon_text" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
-        <LinearLayout
-            android:id="@+id/linearLayoutRemoveFromSaved"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayoutSave"
-            app:layout_constraintStart_toStartOf="@+id/linearLayoutSave"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
-            tools:visibility="gone">
+                <TextView
+                    android:id="@+id/textViewDiscountTitle"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/textViewDiscountTitle_text"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
 
-            <Button
-                android:id="@+id/buttonRemoveFromSaved"
+                <TextView
+                    android:id="@+id/textViewDiscountValue"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/buttonRemoveFromSaved_text" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+                <TextView
+                    android:id="@+id/textViewDueDateTitle"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/textViewDueDateTitle_text"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textViewDueDateValue"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutSave"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout6"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+                tools:visibility="visible">
+
+                <Button
+                    android:id="@+id/buttonSaveCupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buttonSaveCupon_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutRemoveFromSaved"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayoutSave"
+                app:layout_constraintStart_toStartOf="@+id/linearLayoutSave"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+                tools:visibility="gone">
+
+                <Button
+                    android:id="@+id/buttonRemoveFromSaved"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buttonRemoveFromSaved_text" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

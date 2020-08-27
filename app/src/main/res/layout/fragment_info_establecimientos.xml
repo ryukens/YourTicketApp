@@ -27,7 +27,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="@color/colorSecundary2"
+                android:background="@color/colorSecundary5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -37,6 +37,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
                     android:text="@string/buttonBack_text"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
@@ -62,7 +63,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="@color/colorSecundary2"
+                android:background="@color/colorPrimaryDark"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayoutEstablishment"
                 app:layout_constraintStart_toStartOf="@+id/linearLayoutEstablishment"
@@ -82,7 +83,7 @@
                 android:id="@+id/linearLayout2"
                 android:layout_width="220dp"
                 android:layout_height="220dp"
-                android:background="@color/colorSecundary2"
+                android:background="@color/colorPrimaryDark"
                 android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="@+id/linearLayout8"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
@@ -108,7 +109,7 @@
                 android:id="@+id/linearLayout3"
                 android:layout_width="220dp"
                 android:layout_height="220dp"
-                android:background="@color/colorSecundary2"
+                android:background="@color/colorPrimaryDark"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
@@ -136,7 +137,7 @@
                 android:id="@+id/linearLayout4"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
-                android:background="@color/colorSecundary2"
+                android:background="@color/colorPrimaryDark"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -162,4 +163,3 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
-

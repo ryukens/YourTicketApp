@@ -12,7 +12,9 @@
         android:id="@+id/searchView_search"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:searchHintIcon="@android:drawable/ic_menu_search"
+        android:searchIcon="@android:drawable/ic_menu_search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +44,7 @@
                 android:id="@+id/hor_scroll_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorSecundary2">
+                android:background="@color/colorPrimary">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -66,7 +68,7 @@
             <HorizontalScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/colorSecundary2">
+                android:background="@color/colorPrimary">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -90,7 +92,7 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorSecundary2">
+                android:background="@color/colorPrimary">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
