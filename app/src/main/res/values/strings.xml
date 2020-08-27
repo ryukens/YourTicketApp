@@ -42,6 +42,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="button_update_profile">Update</string>
+    <string name="text_informacion_cupon">Coupon Information</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_profile">Profile</string>
@@ -49,5 +50,8 @@
     <string name="menu_cupones_guardados">Saved Coupons</string>
     <string name="menu_log_out">Log Out</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textViewLocation_text">Location</string>
+    <string name="textViewCoupon_text">Coupon</string>
+    <string name="checkBoxRemember_text">Remember Me</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
