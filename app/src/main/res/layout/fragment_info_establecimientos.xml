@@ -27,7 +27,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="@color/colorSecundary2"
+                android:background="@color/colorSecundary5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -45,14 +45,13 @@
 
                 <TextView
                     android:id="@+id/textViewEstablishmentTitle"
-                    android:layout_width="350dp"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/adamina"
+                    android:layout_width="430dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:text="@string/textViewEstablishment_text"
-                    android:textAlignment="center"
                     android:textColor="@android:color/white"
-                    android:textSize="24sp"
+                    android:textSize="36sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -64,25 +63,16 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="@color/colorSecundary2"
+                android:background="@color/colorPrimaryDark"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayoutEstablishment"
                 app:layout_constraintStart_toStartOf="@+id/linearLayoutEstablishment"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutEstablishment">
 
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.1"
-                    android:text="@string/textViewLocation_text"
-                    android:textColor="@android:color/white"
-                    android:textSize="24sp" />
-
                 <ImageView
                     android:id="@+id/imageViewMap"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:contentDescription="@string/imageViewMap_text"
                     app:srcCompat="@drawable/img_map_city" />
@@ -93,9 +83,8 @@
                 android:id="@+id/linearLayout2"
                 android:layout_width="220dp"
                 android:layout_height="220dp"
-                android:background="@color/colorSecundary2"
+                android:background="@color/colorPrimaryDark"
                 android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/linearLayout8"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
 
@@ -104,8 +93,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstablishmentCupon_text"
-                    android:textColor="@android:color/white"
-                    android:textSize="24sp"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -120,7 +109,7 @@
                 android:id="@+id/linearLayout3"
                 android:layout_width="220dp"
                 android:layout_height="220dp"
-                android:background="@color/colorSecundary2"
+                android:background="@color/colorPrimaryDark"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
@@ -148,7 +137,7 @@
                 android:id="@+id/linearLayout4"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
-                android:background="@color/colorSecundary2"
+                android:background="@color/colorPrimaryDark"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -160,8 +149,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewEstablishmentCupon_text"
-                    android:textColor="@android:color/white"
-                    android:textSize="24sp"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -174,4 +163,3 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
-
