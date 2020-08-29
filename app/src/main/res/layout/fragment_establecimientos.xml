@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".EstablecimientosFragment">
+    tools:context=".Establecimiento.EstablecimientosFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout8"
@@ -59,13 +59,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@color/colorSecundary3"
+                android:layout_margin="0dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -88,8 +88,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@color/colorSecundary3"
+                android:layout_margin="0dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -112,8 +111,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@color/colorSecundary3"
+                android:layout_margin="0dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -136,8 +134,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@color/colorSecundary3"
+                android:layout_margin="0dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -160,8 +157,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@color/colorSecundary3"
+                android:layout_margin="0dp"
                 android:orientation="vertical">
 
                 <TextView
