@@ -12,7 +12,7 @@
         android:id="@+id/searchView_search"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorSecundary5"
         android:searchHintIcon="@android:drawable/ic_menu_search"
         android:searchIcon="@android:drawable/ic_menu_search"
         app:layout_constraintEnd_toEndOf="parent"
