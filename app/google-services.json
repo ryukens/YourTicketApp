@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "564712951689-501idsv1sq0pshc4uq94ki3md2jpbq0q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moralesjuan.yourticketapp",
+            "certificate_hash": "a31f52b0b0169acdb9d99903700fe88cd00aa7fe"
+          }
+        },
+        {
           "client_id": "564712951689-5bf68rk4ir1c4c5hgqtid9hdnb8q4h8k.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

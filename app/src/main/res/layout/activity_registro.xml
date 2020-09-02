@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistroActivity"
-    android:background="@color/colorJuanci">
+    android:background="@color/colorPrimary"
+    tools:context=".RegistroActivity">
 
     <ImageView
         android:id="@+id/imageView_Cat_Ropa"
@@ -19,9 +19,8 @@
         app:srcCompat="@drawable/ic_profile" />
 
 
-
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewCoupon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -84,8 +83,8 @@
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@+id/textViewCoupon"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCoupon" />
 
     <EditText
         android:id="@+id/editTextTextLastname"
@@ -162,7 +161,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="16dp"
+        android:background="@color/colorPrimaryDark"
         android:text="@string/sing_in"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDateBirth"
@@ -183,8 +184,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

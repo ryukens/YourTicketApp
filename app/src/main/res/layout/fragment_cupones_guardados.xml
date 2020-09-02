@@ -5,8 +5,8 @@
     android:id="@+id/fragment_cupones_guardados_xml"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CuponesGuardadosFragment"
-    android:background="@color/colorJuanci2">
+    android:background="@color/colorPrimary"
+    tools:context=".CuponesGuardadosFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout8"
@@ -15,7 +15,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@color/colorJuanci2"
+        android:background="@color/colorSecundary5"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,6 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
             android:text="@string/buttonBack_text"
             android:textColor="@android:color/black"
             android:background="@color/colorbotones2"
@@ -38,10 +39,12 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@android:color/white"
             android:ems="10"
             android:hint="@string/hintCuponesGuar_text"
             android:inputType="textPersonName"
-            />
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" />
 
     </LinearLayout>
 
@@ -58,8 +61,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/colorFondo">
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
 
 
             <LinearLayout
