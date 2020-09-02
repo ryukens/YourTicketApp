@@ -29,7 +29,6 @@
             android:background="@color/colorPrimaryDark"
             android:text="@string/buttonBack_text"
             android:textColor="@android:color/black"
-            android:background="@color/colorbotones2"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -43,8 +42,8 @@
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textStyle="bold"/>
+
 
     </LinearLayout>
 
