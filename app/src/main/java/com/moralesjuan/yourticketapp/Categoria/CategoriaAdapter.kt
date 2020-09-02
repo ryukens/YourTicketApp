@@ -59,13 +59,10 @@ class CategoriaAdapter(
     }
 
     private fun cargarEstablecimiento(imagen: ImageView, nombre_categoria: String) {
-        val nuevoFragmento =
-            EstablecimientosFragment(
-                nombre_categoria
-            )
+        val nuevoFragmento = EstablecimientosFragment(nombre_categoria)
         imagen.setOnClickListener() {
             val transaction = fragmento.requireFragmentManager().beginTransaction()
-            transaction.add(R.id.fragment_categorias_xml, nuevoFragmento)
+            transaction.add(fragmento.id, nuevoFragmento)
             transaction.addToBackStack(null)
             transaction.commit()
         }
