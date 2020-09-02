@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,7 +13,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.moralesjuan.yourticketapp.Cupones.Cupon
 import com.moralesjuan.yourticketapp.Cupones.CuponAdapter
 
-class InicioFragment(private var titulo_promocion: String) : Fragment() {
+class InicioFragment : Fragment() {
 
     private lateinit var cuponAdapter: CuponAdapter
     private lateinit var recyclerViewCupon: RecyclerView
@@ -40,17 +41,19 @@ class InicioFragment(private var titulo_promocion: String) : Fragment() {
     }
 
     fun cargarLista(root: View): View {
+        lateinit var cupon_id : String
         val db = FirebaseFirestore.getInstance()
         db.collection("cupon")
             .get()
             .addOnSuccessListener { documents ->
                 for (documento in documents) {
                     val cupon = documento.toObject(Cupon::class.java)
+                    cupon_id = documento.id
                     listaCupones.add(cupon)
                 }
 //                Toast.makeText(context, "Base de datos leida", Toast.LENGTH_SHORT).show()
 
-                cuponAdapter = CuponAdapter(this, listaCupones, R.layout.row_cupon)
+                cuponAdapter = CuponAdapter(this, listaCupones, R.layout.row_cupon, cupon_id)
                 recyclerViewCupon = root.findViewById(R.id.recyclerViewCupon)
                 recyclerViewCupon.layoutManager = LinearLayoutManager(context)
                 recyclerViewCupon.adapter = cuponAdapter
@@ -58,4 +61,5 @@ class InicioFragment(private var titulo_promocion: String) : Fragment() {
             }
         return root
     }
+
 }

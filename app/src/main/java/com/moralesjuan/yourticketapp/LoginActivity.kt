@@ -32,8 +32,8 @@ class LoginActivity : AppCompatActivity() {
                 editTextEmail.error = "Invalid email"
                 return@setOnClickListener
             }else if(editTextTextPersonName2.length() <= MIN_PASSWORD_LENGTH){
-            editTextTextPersonName2.error = "Password must be at least 8 characters long"
-            return@setOnClickListener
+                editTextTextPersonName2.error = "Password must be at least 8 characters long"
+                return@setOnClickListener
             }else {
                 val db = FirebaseFirestore.getInstance()
                 db.collection("usuario")

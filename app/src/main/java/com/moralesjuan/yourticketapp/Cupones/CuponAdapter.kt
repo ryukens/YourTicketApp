@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.moralesjuan.yourticketapp.Establecimiento.EstablecimientosFragment
+import com.moralesjuan.yourticketapp.InfoCupon.InformacionDelCuponFragment
 import com.moralesjuan.yourticketapp.InicioFragment
 import com.moralesjuan.yourticketapp.R
 
@@ -17,7 +18,8 @@ class CuponAdapter (
     //private val context: Context,
     private val fragmento: Fragment,
     private val lista_cupones: ArrayList<Cupon>,
-    private val layout: Int
+    private val layout: Int,
+    private val cupon_id : String
 ) : RecyclerView.Adapter<CuponAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(
@@ -37,7 +39,7 @@ class CuponAdapter (
         var imagen = holder.itemView.findViewById<ImageView>(R.id.imageView_imagen_cupon)
         Glide.with(holder.itemView.context).load(lista_cupones[position].path_cupon)
             .into(imagen)
-        cargarCupones(imagen, holder.titulo_promocion.text.toString())
+        cargarInfoCupones(imagen)
 
     }
 
@@ -57,8 +59,8 @@ class CuponAdapter (
         }
     }
 
-    private fun cargarCupones(imagen: ImageView, titulo_promocion: String) {
-        val nuevoFragmento = InicioFragment(titulo_promocion)
+    private fun cargarInfoCupones(imagen: ImageView) {
+        val nuevoFragmento = InformacionDelCuponFragment(cupon_id)
         imagen.setOnClickListener() {
             val transaction = fragmento.requireFragmentManager().beginTransaction()
             transaction.add(fragmento.id, nuevoFragmento)
