@@ -12,9 +12,14 @@ import com.bumptech.glide.Glide
 import com.google.firebase.firestore.FirebaseFirestore
 import com.moralesjuan.yourticketapp.Establecimiento.Establecimiento
 import com.moralesjuan.yourticketapp.InfoCupon.InformacionDelCuponFragment
+import com.moralesjuan.yourticketapp.MapsFragment
+import com.moralesjuan.yourticketapp.MyListener
 import com.moralesjuan.yourticketapp.R
+import kotlinx.android.synthetic.*
 
 class InfoEstablecimientosFragment(private var nombre_establecimiento: String) : Fragment() {
+
+    private lateinit var fragmentGoogle: Fragment
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,6 +41,10 @@ class InfoEstablecimientosFragment(private var nombre_establecimiento: String) :
 //            transaction.addToBackStack(null)
 //            transaction.commit()
 //        }
+        fragmentGoogle = MapsFragment(textViewEstName.text as String)
+        activity?.supportFragmentManager?.beginTransaction()
+            ?.replace(R.id.fragment2,fragmentGoogle)
+            ?.commit()
         return root
     }
 
@@ -82,4 +91,5 @@ class InfoEstablecimientosFragment(private var nombre_establecimiento: String) :
                 }
             }
     }
+
 }

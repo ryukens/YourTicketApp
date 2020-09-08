@@ -1,16 +1,12 @@
 package com.moralesjuan.yourticketapp
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.bumptech.glide.Glide
 import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.BitmapDescriptor
@@ -18,32 +14,32 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.firebase.firestore.FirebaseFirestore
-import com.moralesjuan.yourticketapp.Categoria.Categoria
-import com.moralesjuan.yourticketapp.Establecimiento.Establecimiento
-import kotlinx.android.synthetic.main.fragment_maps.*
+import com.moralesjuan.yourticketapp.MapsFragment
 
 
-class MapsFragment : Fragment() {
+class MapsFragment(private var nombre_establecimiento: String="") : Fragment() {
 
     private val callback = OnMapReadyCallback { googleMap ->
+        googleMap.clear()
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng(-0.225219,-78.5248),11.0F));
-        val db = FirebaseFirestore.getInstance()
-        db.collection("establecimiento")
-            .whereEqualTo("nombre_est", "Rusty")
-            .get()
-            .addOnSuccessListener { documents ->
-                for (documento in documents) {
-                    for (ubicacion in documento["ubicacion"] as ArrayList<String>){
-                        googleMap.addMarker(
-                            MarkerOptions()
-                                .position(LatLng(ubicacion.substringBefore(";").toDouble(),ubicacion.substringAfter(";").toDouble()))
-                                .icon(getIcono(documento["categoria_est"].toString()))
-                                .anchor(0.1f,0.1f)
-                        )
+        if(nombre_establecimiento != ""){
+            val db = FirebaseFirestore.getInstance()
+            db.collection("establecimiento")
+                .whereEqualTo("nombre_est", nombre_establecimiento)
+                .get()
+                .addOnSuccessListener { documents ->
+                    for (documento in documents) {
+                        for (ubicacion in documento["ubicacion"] as ArrayList<String>){
+                            googleMap.addMarker(
+                                MarkerOptions()
+                                    .position(LatLng(ubicacion.substringBefore(";").toDouble(),ubicacion.substringAfter(";").toDouble()))
+                                    .icon(getIcono(documento["categoria_est"].toString()))
+                                    .anchor(0.1f,0.1f)
+                            )
+                        }
                     }
-
                 }
-            }
+        }
         googleMap.uiSettings.isZoomControlsEnabled = true
         googleMap.uiSettings.isCompassEnabled = true
     }
@@ -60,7 +56,9 @@ class MapsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
+        Toast.makeText(context, nombre_establecimiento, Toast.LENGTH_SHORT).show()
         mapFragment?.getMapAsync(callback)
+
     }
 
     fun getIcono(categoria: String): BitmapDescriptor? {

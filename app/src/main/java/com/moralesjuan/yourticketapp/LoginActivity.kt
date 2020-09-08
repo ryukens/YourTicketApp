@@ -70,6 +70,7 @@ class LoginActivity : AppCompatActivity() {
 
     fun InicializarArchivoDePreferencias(){
         val masterKeyAlias: String = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
+
         sharedPreferences = EncryptedSharedPreferences.create(
             "secret_shared_prefs",//filename
             masterKeyAlias,
