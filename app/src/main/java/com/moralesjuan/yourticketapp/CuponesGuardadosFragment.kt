@@ -27,14 +27,7 @@ class CuponesGuardadosFragment : Fragment() {
         var root = inflater.inflate(R.layout.fragment_cupones_guardados, container, false)
 
         root = cargarLista(root)
-//        val imageView_Cupon1: ImageView = root.findViewById(R.id.imageView_Cupon1)
-//        val nuevoFragmento = InformacionDelCuponFragment()
-//        imageView_Cupon1.setOnClickListener() {
-//            val transaction = requireFragmentManager().beginTransaction()
-//            transaction.add(R.id.fragment_cupones_guardados_xml, nuevoFragmento)
-//            transaction.addToBackStack(null)
-//            transaction.commit()
-//        }
+
         return root
     }
 
@@ -50,10 +43,9 @@ class CuponesGuardadosFragment : Fragment() {
                 }
 //                Toast.makeText(context, "Base de datos leida", Toast.LENGTH_SHORT).show()
                 cuponAdapter = CuponAdapter(this, listaCupones, R.layout.row_cupon)
-                recyclerViewCupon = root.findViewById(R.id.recyclerViewCupon)
+                recyclerViewCupon = root.findViewById(R.id.recyclerViewCuponesGuardados)
                 recyclerViewCupon.layoutManager = LinearLayoutManager(context)
                 recyclerViewCupon.adapter = cuponAdapter
-
             }
         return root
     }
