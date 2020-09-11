@@ -32,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
                 editTextEmail.error = "Invalid email"
                 return@setOnClickListener
             }else if(editTextTextPersonName2.length() <= MIN_PASSWORD_LENGTH){
-                editTextTextPersonName2.error = "Password must be at least 8 characters long"
+            editTextTextPersonName2.error = "Password must be at least $MIN_PASSWORD_LENGTH characters long"
                 return@setOnClickListener
             }else {
                 val db = FirebaseFirestore.getInstance()
@@ -42,7 +42,10 @@ class LoginActivity : AppCompatActivity() {
                         if(documents != null){
                             for (documento in documents) {
                                 if(editTextEmail.text.toString() == documento.data.getValue("correo_usuario") && editTextTextPersonName2.text.toString() == documento.data.getValue("contrasenia_usuario")){
-                                    startActivity(Intent(this, PrincipalActivity::class.java))
+                                    val i = Intent(this@LoginActivity, PrincipalActivity::class.java)
+                                    i.putExtra(EXTRA_ID, documento.id)
+                                    i.putExtra(EXTRA_EMAIL, editTextEmail.text.toString())
+                                    startActivity(i)
                                     credencialesCorrectas = true
                                     finish()
                                 }

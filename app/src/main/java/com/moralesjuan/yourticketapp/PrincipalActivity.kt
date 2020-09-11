@@ -16,11 +16,19 @@ class PrincipalActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration1
 
+    companion object {
+        var globalVarId = ""
+        var globalVarEmail = ""
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+        PrincipalActivity.Companion.globalVarId = intent.getStringExtra(EXTRA_ID).toString()
+        PrincipalActivity.Companion.globalVarEmail = intent.getStringExtra(EXTRA_EMAIL).toString()
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
