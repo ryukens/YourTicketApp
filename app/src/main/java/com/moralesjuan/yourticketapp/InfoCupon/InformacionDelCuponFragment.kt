@@ -28,6 +28,7 @@ class InformacionDelCuponFragment(private var id_cupon: String) : Fragment() {
         val buttonSaveCupon: Button = root.findViewById(R.id.buttonSaveCupon)
         buttonSaveCupon.setOnClickListener() {
             Toast.makeText(buttonSaveCupon.context, "Coupon Saved", Toast.LENGTH_LONG).show()
+
         }
         return root
     }
@@ -49,7 +50,9 @@ class InformacionDelCuponFragment(private var id_cupon: String) : Fragment() {
                 textViewDiscount.text = it["promocion"].toString()
                 textViewDate.text = it["expiracion"].toString()
             }
+    }
 
+    fun guardarCupon(){
 
     }
 }
