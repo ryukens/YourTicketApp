@@ -20,8 +20,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.core.widget.NestedScrollView
-        android:layout_width="409dp"
-        android:layout_height="681dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,81 +35,27 @@
 
 
             <ImageView
-                android:id="@+id/imageView_Cat_Musica"
+                android:id="@+id/imageView_Logo"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@drawable/ic_ticket" />
+                android:layout_height="107dp"
+                android:src="@drawable/logo" />
 
-            <HorizontalScrollView
-                android:id="@+id/hor_scroll_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewCupon"
+                android:layout_width="402dp"
+                android:layout_height="471dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.496"
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                />
 
-                    <ImageButton
-                        android:id="@+id/imageButton3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/mcdonalds" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/mcdonalds" />
-                </LinearLayout>
-            </HorizontalScrollView>
-
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageButton
-                        android:id="@+id/imageButton4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/supermaxi" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/supermaxi" />
-                </LinearLayout>
-            </HorizontalScrollView>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageButton
-                        android:id="@+id/imageButton6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/deprati" />
-
-                </LinearLayout>
-            </HorizontalScrollView>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
+
 
     <!--    <include layout="@layout/content_scrolling" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -46,132 +46,142 @@
 
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/scrollView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCuponesGuardados"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout8"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:orientation="vertical">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8" />
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+    <!--    <ScrollView-->
+<!--        android:id="@+id/scrollView"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/linearLayout8"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/linearLayout8"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">-->
 
-                <ImageView
-                    android:id="@+id/imageView_Cupon1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="181dp"
-                    android:layout_margin="@dimen/margin"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/img_cupo" />
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/colorPrimary"-->
+<!--            android:orientation="vertical">-->
 
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="188dp"
-                    android:layout_margin="@dimen/margin"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/img_cupo2" />
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="horizontal">-->
 
-                <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="188dp"
-                    android:layout_margin="@dimen/margin"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/img_cupo2" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView_Cupon1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="181dp"-->
+<!--                    android:layout_margin="@dimen/margin"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/img_cupo" />-->
 
-                <ImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="180dp"
-                    android:layout_margin="@dimen/margin"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/img_cupo" />
-            </LinearLayout>
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView7"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="188dp"-->
+<!--                    android:layout_margin="@dimen/margin"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/img_cupo2" />-->
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="horizontal">-->
 
-                <ImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="193dp"
-                    android:layout_margin="@dimen/margin"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/img_cupo" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView8"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="188dp"-->
+<!--                    android:layout_margin="@dimen/margin"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/img_cupo2" />-->
 
-                <ImageView
-                    android:id="@+id/imageView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/img_cupo2" />
-            </LinearLayout>
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView9"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="180dp"-->
+<!--                    android:layout_margin="@dimen/margin"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/img_cupo" />-->
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="horizontal">-->
 
-                <ImageView
-                    android:id="@+id/imageView12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="195dp"
-                    android:layout_margin="@dimen/margin"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/img_cupo2" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView10"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="193dp"-->
+<!--                    android:layout_margin="@dimen/margin"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/img_cupo" />-->
 
-                <ImageView
-                    android:id="@+id/imageView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="189dp"
-                    android:layout_margin="@dimen/margin"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/img_cupo" />
-            </LinearLayout>
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView11"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/img_cupo2" />-->
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="horizontal">-->
 
-                <ImageView
-                    android:id="@+id/imageView15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="187dp"
-                    android:layout_margin="@dimen/margin"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/img_cupo2" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView12"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="195dp"-->
+<!--                    android:layout_margin="@dimen/margin"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/img_cupo2" />-->
 
-                <ImageView
-                    android:id="@+id/imageView14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="185dp"
-                    android:layout_margin="@dimen/margin"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/img_cupo" />
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView13"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="189dp"-->
+<!--                    android:layout_margin="@dimen/margin"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/img_cupo" />-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView15"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="187dp"-->
+<!--                    android:layout_margin="@dimen/margin"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/img_cupo2" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView14"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="185dp"-->
+<!--                    android:layout_margin="@dimen/margin"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:srcCompat="@drawable/img_cupo" />-->
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

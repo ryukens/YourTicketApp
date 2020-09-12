@@ -1,22 +1,27 @@
-package com.moralesjuan.yourticketapp.Categoria
+package com.moralesjuan.yourticketapp.Cupones
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.moralesjuan.yourticketapp.Establecimiento.EstablecimientosFragment
+import com.moralesjuan.yourticketapp.InfoCupon.InformacionDelCuponFragment
+import com.moralesjuan.yourticketapp.InicioFragment
 import com.moralesjuan.yourticketapp.R
 
-class CategoriaAdapter(
+
+class CuponAdapter (
     //private val context: Context,
     private val fragmento: Fragment,
-    private val lista_categorias: ArrayList<Categoria>,
+    private val lista_cupones: ArrayList<Cupon>,
     private val layout: Int
-) : RecyclerView.Adapter<CategoriaAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<CuponAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -31,41 +36,37 @@ class CategoriaAdapter(
         holder: ViewHolder,
         position: Int
     ) {
-        holder.nombre_categoria.text = lista_categorias[position].nombre_cat
-        //holder.imagen_categoria.setImageResource(R.drawable.img_cine)
-        var imagen = holder.itemView.findViewById<ImageView>(R.id.imageView_imagen)
-        Glide.with(holder.itemView.context).load(lista_categorias[position].path_imagen)
+        holder.titulo_promocion.text = lista_cupones[position].promocion
+        var imagen = holder.itemView.findViewById<ImageView>(R.id.imageView_imagen_cupon)
+        Glide.with(holder.itemView.context).load(lista_cupones[position].path_cupon)
             .into(imagen)
-        cargarEstablecimiento(imagen, holder.nombre_categoria.text.toString())
+        cargarInfoCupones(imagen, lista_cupones[position].id)
 
-//        val ejemplo_categoria = holder.itemView.findViewById<ImageView>(R.id.ejemplo_categoria)
-//        holder.imageViewCategoria.setImageResource(R.drawable.img_ropa)
     }
 
     override fun getItemCount(): Int {
-        return lista_categorias.size
+        return lista_cupones.size
     }
 
     class ViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
 
-        var nombre_categoria: TextView
-        var imagen_categoria: ImageView
+        var titulo_promocion: TextView
+        var imagen_cupon: ImageView
 
         init {
-            nombre_categoria = itemView.findViewById<View>(R.id.textView_titulo) as TextView
-            imagen_categoria = itemView.findViewById<View>(R.id.imageView_imagen) as ImageView
+            titulo_promocion = itemView.findViewById<View>(R.id.textView_titulo_cupon) as TextView
+            imagen_cupon = itemView.findViewById<View>(R.id.imageView_imagen_cupon) as ImageView
         }
     }
 
-    private fun cargarEstablecimiento(imagen: ImageView, nombre_categoria: String) {
-        val nuevoFragmento = EstablecimientosFragment(nombre_categoria)
+    private fun cargarInfoCupones(imagen: ImageView, cuponID : String) {
+        val nuevoFragmento = InformacionDelCuponFragment(cuponID)
         imagen.setOnClickListener() {
             val transaction = fragmento.requireFragmentManager().beginTransaction()
             transaction.add(fragmento.id, nuevoFragmento)
             transaction.addToBackStack(null)
             transaction.commit()
         }
-
     }
 }
