@@ -10,6 +10,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.google.android.gms.ads.MobileAds
 import androidx.navigation.ui.AppBarConfiguration as AppBarConfiguration1
 
 class PrincipalActivity : AppCompatActivity() {
@@ -27,6 +28,8 @@ class PrincipalActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
+        MobileAds.initialize(this){}
+
         PrincipalActivity.Companion.globalVarId = intent.getStringExtra(EXTRA_ID).toString()
         PrincipalActivity.Companion.globalVarEmail = intent.getStringExtra(EXTRA_EMAIL).toString()
 
@@ -42,6 +45,7 @@ class PrincipalActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

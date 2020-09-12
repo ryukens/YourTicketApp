@@ -1,6 +1,6 @@
 package com.moralesjuan.yourticketapp.InfoCupon
 
-import android.content.Intent
+
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,9 +12,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.google.android.gms.ads.AdRequest
 import com.google.firebase.firestore.FirebaseFirestore
-import com.moralesjuan.yourticketapp.EXTRA_EMAIL
-import com.moralesjuan.yourticketapp.EXTRA_ID
 import com.moralesjuan.yourticketapp.PrincipalActivity
 import com.moralesjuan.yourticketapp.R
 import kotlinx.android.synthetic.main.fragment_informacion_del_cupon.view.*
@@ -36,6 +35,10 @@ class InformacionDelCuponFragment(private var id_cupon: String) : Fragment() {
         buttonSaveCupon.setOnClickListener() {
             guardarCupon(root)
         }
+
+        val adRequest = AdRequest.Builder().build()
+        root.adViewCoupon.loadAd(adRequest)
+
         return root
     }
 

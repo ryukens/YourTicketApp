@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.google.android.gms.ads.AdRequest
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_perfil.view.*
 import java.util.regex.Pattern
@@ -52,6 +53,9 @@ class PerfilFragment : Fragment() {
                 }
 
         }
+
+        val adRequest = AdRequest.Builder().build()
+        root.adViewPerfil.loadAd(adRequest)
 
         return root
     }

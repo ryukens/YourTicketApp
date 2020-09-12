@@ -4,20 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+import com.google.android.gms.ads.AdRequest
 import com.google.firebase.firestore.FirebaseFirestore
 import com.moralesjuan.yourticketapp.Cupones.Cupon
 import com.moralesjuan.yourticketapp.Cupones.CuponAdapter
 import com.moralesjuan.yourticketapp.Establecimiento.Establecimiento
-import com.moralesjuan.yourticketapp.InfoCupon.InformacionDelCuponFragment
 import com.moralesjuan.yourticketapp.R
-import kotlinx.android.synthetic.main.fragment_info_establecimientos.*
+import kotlinx.android.synthetic.main.fragment_info_establecimientos.view.*
 
 class InfoEstablecimientosFragment(private var nombre_establecimiento: String) : Fragment() {
 
@@ -35,6 +32,9 @@ class InfoEstablecimientosFragment(private var nombre_establecimiento: String) :
         val textViewEstName: TextView = root.findViewById(R.id.textViewEstablishmentTitle)
         textViewEstName.text = nombre_establecimiento
         cargarInfo(root)
+
+        val adRequest = AdRequest.Builder().build()
+        root.adViewInfoEstablecimiento.loadAd(adRequest)
 
         return root
     }
