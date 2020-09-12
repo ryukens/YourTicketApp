@@ -67,7 +67,6 @@ class CuponAdapter (
             transaction.add(fragmento.id, nuevoFragmento)
             transaction.addToBackStack(null)
             transaction.commit()
-//            Toast.makeText(fragmento.context, lista_cupones[1].toString(), Toast.LENGTH_LONG).show()
         }
     }
 }

@@ -1,3 +1,3 @@
 package com.moralesjuan.yourticketapp
 
-var USER_ID = ""
+var GUARDADO = false
