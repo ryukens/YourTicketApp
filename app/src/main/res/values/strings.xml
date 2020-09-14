@@ -54,5 +54,6 @@
     <string name="textViewLocation_text">Location</string>
     <string name="textViewCoupon_text">Coupon</string>
     <string name="checkBoxRemember_text">Remember Me</string>
+    <string name="title_activity_maps">Map</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

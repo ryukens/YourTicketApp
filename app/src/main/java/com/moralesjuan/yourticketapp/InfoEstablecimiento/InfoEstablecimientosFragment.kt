@@ -13,6 +13,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.moralesjuan.yourticketapp.Cupones.Cupon
 import com.moralesjuan.yourticketapp.Cupones.CuponAdapter
 import com.moralesjuan.yourticketapp.Establecimiento.Establecimiento
+import com.moralesjuan.yourticketapp.MapsFragment
 import com.moralesjuan.yourticketapp.R
 import kotlinx.android.synthetic.main.fragment_info_establecimientos.view.*
 
@@ -21,6 +22,8 @@ class InfoEstablecimientosFragment(private var nombre_establecimiento: String) :
     private lateinit var cuponAdapter: CuponAdapter
     private lateinit var recyclerViewCupon: RecyclerView
     private var listaCupones = arrayListOf<Cupon>()
+
+    private lateinit var fragmentGoogle: Fragment
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,7 +38,10 @@ class InfoEstablecimientosFragment(private var nombre_establecimiento: String) :
 
         val adRequest = AdRequest.Builder().build()
         root.adViewInfoEstablecimiento.loadAd(adRequest)
-
+        fragmentGoogle = MapsFragment(textViewEstName.text as String)
+        activity?.supportFragmentManager?.beginTransaction()
+            ?.replace(R.id.fragment2,fragmentGoogle)
+            ?.commit()
         return root
     }
 

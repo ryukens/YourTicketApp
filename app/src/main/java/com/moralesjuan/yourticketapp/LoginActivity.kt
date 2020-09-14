@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
             if(!ValidarEmail(editTextEmail.text.toString())){
                 editTextEmail.error = "Invalid email"
                 return@setOnClickListener
-            }else if(editTextTextPersonName2.length() <= MIN_PASSWORD_LENGTH){
+            }else if(editTextTextPersonName2.length() < MIN_PASSWORD_LENGTH){
             editTextTextPersonName2.error = "Password must be at least $MIN_PASSWORD_LENGTH characters long"
                 return@setOnClickListener
             }else {
@@ -73,6 +73,7 @@ class LoginActivity : AppCompatActivity() {
 
     fun InicializarArchivoDePreferencias(){
         val masterKeyAlias: String = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
+
         sharedPreferences = EncryptedSharedPreferences.create(
             "secret_shared_prefs",//filename
             masterKeyAlias,
