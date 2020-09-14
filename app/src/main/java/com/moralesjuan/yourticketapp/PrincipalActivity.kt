@@ -1,21 +1,23 @@
 package com.moralesjuan.yourticketapp
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import com.google.android.material.navigation.NavigationView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.get
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import androidx.core.view.get
 import com.google.android.gms.ads.MobileAds
+import com.google.android.material.navigation.NavigationView
 import androidx.navigation.ui.AppBarConfiguration as AppBarConfiguration1
+
 
 class PrincipalActivity : AppCompatActivity() {
 
@@ -49,10 +51,10 @@ class PrincipalActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-//        navView[4].setOnClickListener{
-//            startActivity(Intent(this, LoginActivity::class.java))
-//            finish()
-//        }
+
+        navView.menu.findItem(R.id.nav_log_out).setOnMenuItemClickListener {
+            logOut()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -66,15 +68,10 @@ class PrincipalActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id = item.itemId;
-        if(id == R.id.nav_log_out){
-            Toast.makeText(this, "Log Out", Toast.LENGTH_SHORT).show();
-            var intent = Intent(this,LoginActivity::class.java)
-            startActivity(intent)
-            finish()
-            return true
-        }
-        return super.onOptionsItemSelected(item)
+    fun logOut() : Boolean {
+        //Toast.makeText(this, "Log Out", Toast.LENGTH_SHORT).show();
+        startActivity (Intent(this, LoginActivity::class.java))
+        finish()
+        return true
     }
 }

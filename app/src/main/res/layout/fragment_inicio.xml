@@ -8,18 +8,16 @@
     android:background="@color/colorPrimary"
     tools:context=".InicioFragment">
 
-    <SearchView
+    <EditText
         android:id="@+id/searchView_search"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorSecundary5"
-        android:searchHintIcon="@android:drawable/ic_menu_search"
-        android:searchIcon="@android:drawable/ic_menu_search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
 
-    </SearchView>
+    </EditText>
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adViewPrincipal"
