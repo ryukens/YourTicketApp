@@ -1,10 +1,12 @@
 package com.moralesjuan.yourticketapp.Cupones
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -18,8 +20,7 @@ class CuponAdapter (
     //private val context: Context,
     private val fragmento: Fragment,
     private val lista_cupones: ArrayList<Cupon>,
-    private val layout: Int,
-    private val cupon_id : String
+    private val layout: Int
 ) : RecyclerView.Adapter<CuponAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(
@@ -39,7 +40,7 @@ class CuponAdapter (
         var imagen = holder.itemView.findViewById<ImageView>(R.id.imageView_imagen_cupon)
         Glide.with(holder.itemView.context).load(lista_cupones[position].path_cupon)
             .into(imagen)
-        cargarInfoCupones(imagen)
+        cargarInfoCupones(imagen, lista_cupones[position].id)
 
     }
 
@@ -59,16 +60,13 @@ class CuponAdapter (
         }
     }
 
-    private fun cargarInfoCupones(imagen: ImageView) {
-        val nuevoFragmento = InformacionDelCuponFragment(cupon_id)
+    private fun cargarInfoCupones(imagen: ImageView, cuponID : String) {
+        val nuevoFragmento = InformacionDelCuponFragment(cuponID)
         imagen.setOnClickListener() {
             val transaction = fragmento.requireFragmentManager().beginTransaction()
             transaction.add(fragmento.id, nuevoFragmento)
             transaction.addToBackStack(null)
             transaction.commit()
         }
-
     }
-
-
 }

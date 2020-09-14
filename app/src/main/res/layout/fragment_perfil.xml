@@ -7,6 +7,29 @@
     android:background="@color/colorPrimary"
     tools:context=".PerfilFragment">
 
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_Cat_Cine"
+        android:layout_width="175dp"
+        android:layout_height="148dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintEnd_toEndOf="@+id/adViewPerfil"
+        app:layout_constraintStart_toStartOf="@+id/adViewPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/adViewPerfil" />
+
     <TextView
         android:id="@+id/textView_name"
         android:layout_width="0dp"
@@ -24,9 +47,10 @@
         android:id="@+id/editTextTextPersonName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz"
         android:ems="10"
+        android:hint="First Name"
         android:inputType="textPersonName"
-        android:text="@string/nav_header_title"
         app:layout_constraintEnd_toEndOf="@+id/textView_name"
         app:layout_constraintStart_toStartOf="@+id/textView_name"
         app:layout_constraintTop_toBottomOf="@+id/textView_name" />
@@ -45,9 +69,10 @@
         android:id="@+id/editTextTextPersonName5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz"
         android:ems="10"
+        android:hint="Last Name"
         android:inputType="textPersonName"
-        android:text="@string/nav_header_title"
         app:layout_constraintEnd_toEndOf="@+id/textView_lastname"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/textView_lastname"
@@ -68,8 +93,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Email"
         android:inputType="textEmailAddress"
-        android:text="@string/nav_header_subtitle"
         app:layout_constraintEnd_toEndOf="@+id/textView_email"
         app:layout_constraintStart_toStartOf="@+id/textView_email"
         app:layout_constraintTop_toBottomOf="@+id/textView_email" />
@@ -89,14 +114,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="23/07/2020"
+        android:hint="Date"
+        android:inputType="date"
         app:layout_constraintEnd_toEndOf="@+id/textView_birthday"
         app:layout_constraintStart_toStartOf="@+id/textView_birthday"
         app:layout_constraintTop_toBottomOf="@+id/textView_birthday" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -106,16 +131,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/colorbotones2"/>
-
-    <ImageView
-        android:id="@+id/imageView_Cat_Cine"
-        android:layout_width="175dp"
-        android:layout_height="148dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/ic_profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
