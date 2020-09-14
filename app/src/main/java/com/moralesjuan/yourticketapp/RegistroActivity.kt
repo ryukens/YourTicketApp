@@ -1,5 +1,6 @@
 package com.moralesjuan.yourticketapp
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -24,6 +25,10 @@ class RegistroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
+
+        editTextDateBirth.setOnClickListener {
+            showDatePickerDialog()
+        }
 
         buttonSingIn.setOnClickListener() {
 
@@ -123,5 +128,15 @@ class RegistroActivity : AppCompatActivity() {
                     }
                 }
             }
+    }
+
+    private fun showDatePickerDialog() {
+        val newFragment = DatePickerFragment.newInstance(DatePickerDialog.OnDateSetListener { _, year, month, day ->
+            // +1 because January is zero
+            val selectedDate = day.toString() + " / " + (month + 1) + " / " + year
+            editTextDateBirth.setText(selectedDate)
+        })
+
+        newFragment.show(supportFragmentManager, "datePicker")
     }
 }
