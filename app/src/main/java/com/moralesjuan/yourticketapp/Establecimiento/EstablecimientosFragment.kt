@@ -4,12 +4,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.gms.ads.AdRequest
 import com.google.firebase.firestore.FirebaseFirestore
 import com.moralesjuan.yourticketapp.R
+import kotlinx.android.synthetic.main.fragment_categorias.view.*
 
 class EstablecimientosFragment(private var nombre_categoria: String) : Fragment() {
 
@@ -24,19 +27,13 @@ class EstablecimientosFragment(private var nombre_categoria: String) : Fragment(
     ): View? {
         var root = inflater.inflate(R.layout.fragment_categorias, container, false)
 
+        val textViewTitulo:TextView = root.findViewById(R.id.textViewCatego)
+        textViewTitulo.text = nombre_categoria
         root = cargarLista(root, nombre_categoria)
-//        val imageView_Est_Taty: ImageView = root.findViewById(R.id.imageView_Est_Taty)
-//        val imageView_Est_Eta: ImageView = root.findViewById(R.id.imageView_Est_Etafa)
-//        val imageView_Est_Naf: ImageView = root.findViewById(R.id.imageView_Est_Naf)
-//        val imageView_Est_Forever: ImageView = root.findViewById(R.id.imageView_Est_Forever)
-//        val imageView_Est_Super: ImageView = root.findViewById(R.id.imageView_Est_Super)
-//        val nuevoFragmento = InfoEstablecimientosFragment()
-//        imageView_Est_Taty.setOnClickListener(){
-//            val transaction = requireFragmentManager().beginTransaction()
-//            transaction.add(R.id.fragment_establecimientos_xml, nuevoFragmento)
-//            transaction.addToBackStack(null)
-//            transaction.commit()
-//        }
+
+        val adRequest = AdRequest.Builder().build()
+        root.adViewCategory.loadAd(adRequest)
+
         return root
     }
 
@@ -50,18 +47,10 @@ class EstablecimientosFragment(private var nombre_categoria: String) : Fragment(
                     val establecimiento = documento.toObject(Establecimiento::class.java)
                     listaEstablecimientos.add(establecimiento)
                 }
-                Toast.makeText(
-                    context,
-                    "Base de datos leida",
-                    Toast.LENGTH_SHORT
-                ).show()
+//                Toast.makeText(context, "Base de datos leida", Toast.LENGTH_SHORT).show()
 
                 establecimientoAdapter =
-                    EstablecimientoAdapter(
-                        this,
-                        listaEstablecimientos,
-                        R.layout.row_categoria
-                    )
+                    EstablecimientoAdapter(this, listaEstablecimientos, R.layout.row_categoria)
                 recyclerViewCategoria = root.findViewById(R.id.recyclerViewCategoria)
                 recyclerViewCategoria.layoutManager = LinearLayoutManager(context)
                 recyclerViewCategoria.adapter = establecimientoAdapter

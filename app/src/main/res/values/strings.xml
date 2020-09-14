@@ -17,9 +17,10 @@
     <string name="textViewQRcode_text">QR code</string>
     <string name="textViewCuponDetails_text">Details</string>
     <string name="textViewEstablishmentTitle_text">"Establishment:"</string>
-    <string name="textViewDiscountTitle_text">Discount:</string>
+    <string name="textViewDiscountTitle_text">Promotion:</string>
     <string name="textViewDueDateTitle_text">Due Date:</string>
     <string name="buttonSaveCupon_text">Save Coupon</string>
+    <string name="buttonRemoveCupon_text">Remove Coupon</string>
     <string name="text_CuponSaved">Coupon Saved</string>
     <string name="buttonRemoveFromSaved_text">Remove from Saved</string>
     <string name="imageViewQRcode_text">QR_code</string>
@@ -53,5 +54,6 @@
     <string name="textViewLocation_text">Location</string>
     <string name="textViewCoupon_text">Coupon</string>
     <string name="checkBoxRemember_text">Remember Me</string>
+    <string name="title_activity_maps">Map</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

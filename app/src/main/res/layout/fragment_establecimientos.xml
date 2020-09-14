@@ -26,9 +26,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
             android:text="@string/buttonBack_text"
             android:textColor="@android:color/black"
+            android:background="@color/colorbotones2"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -75,13 +75,16 @@
                     android:text="@string/textViewEstable1_text"
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@color/colorProbando"
+                 />
 
                 <ImageView
                     android:id="@+id/imageView_Est_Taty"
                     android:layout_width="match_parent"
                     android:layout_height="228dp"
-                    android:src="@drawable/img_estable1" />
+                    android:src="@drawable/img_estable1"
+                    android:background="@color/colorProbando2"/>
 
             </LinearLayout>
 
@@ -98,13 +101,15 @@
                     android:text="@string/textViewEstable2_text"
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@color/colorProbando" />
 
                 <ImageView
                     android:id="@+id/imageView_Est_Etafa"
                     android:layout_width="match_parent"
                     android:layout_height="267dp"
-                    android:src="@drawable/img_estable2" />
+                    android:src="@drawable/img_estable2"
+                    android:background="@color/colorProbando2"/>
 
             </LinearLayout>
 
@@ -121,13 +126,16 @@
                     android:text="@string/textViewEstable3_text"
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@color/colorProbando"
+                   />
 
                 <ImageView
                     android:id="@+id/imageView_Est_Naf"
                     android:layout_width="match_parent"
                     android:layout_height="187dp"
-                    android:src="@drawable/img_estable3" />
+                    android:src="@drawable/img_estable3"
+                    android:background="@color/colorProbando2"/>
 
             </LinearLayout>
 
@@ -144,13 +152,17 @@
                     android:text="@string/textViewEstable4_text"
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@color/colorProbando"
+                    />
 
                 <ImageView
                     android:id="@+id/imageView_Est_Forever"
                     android:layout_width="match_parent"
                     android:layout_height="204dp"
-                    android:src="@drawable/img_estable4" />
+                    android:src="@drawable/img_estable4"
+                    android:background="@color/colorProbando2"
+                    />
 
             </LinearLayout>
 
@@ -167,13 +179,16 @@
                     android:text="@string/textViewEstable5_text"
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@color/colorProbando"
+                />
 
                 <ImageView
                     android:id="@+id/imageView_Est_Super"
                     android:layout_width="match_parent"
                     android:layout_height="195dp"
-                    android:src="@drawable/img_estable5" />
+                    android:src="@drawable/img_estable5"
+                    android:background="@color/colorProbando2"/>
             </LinearLayout>
 
         </LinearLayout>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorPrimary"
-    tools:context=".InformacionDelCuponFragment">
+    tools:context=".InfoCupon.InformacionDelCuponFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -40,6 +40,7 @@
                     android:layout_weight="1"
                     android:text="@string/buttonBack_text"
                     android:textColor="@android:color/black"
+                    android:background="@color/colorbotones2"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -57,24 +58,36 @@
                     tools:text="@string/textViewCoupon_text" />
             </LinearLayout>
 
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adViewCoupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:adSize="BANNER"
+                app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout8"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout8" />
+
             <LinearLayout
                 android:id="@+id/linearLayout1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@color/colorSecundary3"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
                 app:layout_constraintStart_toStartOf="@+id/linearLayout8"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+                app:layout_constraintTop_toBottomOf="@+id/adViewCoupon">
 
                 <ImageView
                     android:id="@+id/imageViewCupon1"
                     android:layout_width="match_parent"
                     android:layout_height="308dp"
+                    android:background="@color/paleta2"
                     android:contentDescription="@string/imageViewCupon_text"
                     app:srcCompat="@drawable/img_cupon" />
             </LinearLayout>
@@ -106,12 +119,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/imageViewQRcode_text"
-                    app:srcCompat="@drawable/img_codeqr" />
+                    app:srcCompat="@drawable/img_codeqr"
+                    android:background="@color/paleta2"
+                    />
 
                 <TextView
                     android:id="@+id/textViewBlank"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:background="@color/paleta2"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -135,7 +152,8 @@
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    tools:text="@string/textViewCuponDetails_text" />
+                    tools:text="@string/textViewCuponDetails_text"
+                     />
             </LinearLayout>
 
             <LinearLayout
