@@ -24,6 +24,7 @@
         android:id="@+id/imageView_imagen"
         android:layout_width="0dp"
         android:layout_height="228dp"
+        android:contentDescription="@string/imageView_imagen_content_description"
         android:src="@drawable/img_comida"
         app:layout_constraintEnd_toEndOf="@+id/textView_titulo"
         app:layout_constraintStart_toStartOf="@+id/textView_titulo"

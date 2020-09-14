@@ -45,7 +45,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textViewCoupon"
+                    android:id="@+id/textViewRegisterName"
                     android:layout_width="350dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -271,25 +271,6 @@
                     android:text="@string/buttonSaveCupon_text"
                     android:textColor="@android:color/white" />
             </LinearLayout>
-
-            <!--            <LinearLayout-->
-            <!--                android:id="@+id/linearLayoutRemoveFromSaved"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="match_parent"-->
-            <!--                android:background="@android:color/darker_gray"-->
-            <!--                android:orientation="vertical"-->
-            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--                app:layout_constraintEnd_toEndOf="@+id/linearLayoutSave"-->
-            <!--                app:layout_constraintStart_toStartOf="@+id/linearLayoutSave"-->
-            <!--                app:layout_constraintTop_toBottomOf="@+id/linearLayout6"-->
-            <!--                tools:visibility="gone">-->
-
-            <!--                <Button-->
-            <!--                    android:id="@+id/buttonRemoveFromSaved"-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:text="@string/buttonRemoveFromSaved_text" />-->
-            <!--            </LinearLayout>-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

@@ -55,5 +55,34 @@
     <string name="textViewCoupon_text">Coupon</string>
     <string name="checkBoxRemember_text">Remember Me</string>
     <string name="title_activity_maps">Map</string>
+    <string name="textViewRegisterName_text">Name:</string>
+    <string name="textViewRegisterLastname_text">Lastname:</string>
+    <string name="textViewRegisterEmail_text">Email:</string>
+    <string name="textViewRegisterConfirmPassword_text">Confirm Password:</string>
+    <string name="editTextName_hint">Name</string>
+    <string name="editTextTextLastname_hint">Lastname</string>
+    <string name="editTextTextEmail_hint">Email</string>
+    <string name="editTextTextPassword_hint">Password</string>
+    <string name="editTextTextPasswordConfirm_hint">Password</string>
+    <string name="textViewRegisterBirth_text">Date of birth:</string>
+    <string name="editTextDateBirth_hint">dd/mm/yyyy</string>
+    <string name="imageView_Cat_Ropa_content_description">Image_Category_Clothes</string>
+    <string name="imageView_Est_Taty_content_description">imageView_Est_Taty</string>
+    <string name="imageView_Est_Etafa_content_description">imageView_Est_Etafa</string>
+    <string name="imageView_Est_Naf_content_description">imageView_Est_Naf</string>
+    <string name="imageView_Est_Forever_content_description">imageView_Est_Forever</string>
+    <string name="imageView_Est_Super_content_description">imageView_Est_Super</string>
+    <string name="imageView_Logo_content_description">imageView_Logo</string>
+    <string name="imageView_Profile_content_description">imageView_Profile</string>
+    <string name="textView_name">Name</string>
+    <string name="editTextProfileName_hint">First Name</string>
+    <string name="textView_lastname_text">Last Name</string>
+    <string name="editTextProfileLastname_hint">Last Name</string>
+    <string name="textView_email_text">Email</string>
+    <string name="editTextProfileEmail_hint">Email</string>
+    <string name="textView_birthday_text">Birthday</string>
+    <string name="editTextProfileDate_hint">Date</string>
+    <string name="imageView_imagen_content_description">imageView_imagen_item</string>
+    <string name="imageView_imagen_cupon_content_description">imageView_imagen_cupon</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
