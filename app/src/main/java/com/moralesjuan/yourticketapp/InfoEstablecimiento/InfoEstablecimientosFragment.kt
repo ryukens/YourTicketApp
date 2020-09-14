@@ -14,10 +14,7 @@ import com.moralesjuan.yourticketapp.Cupones.Cupon
 import com.moralesjuan.yourticketapp.Cupones.CuponAdapter
 import com.moralesjuan.yourticketapp.Establecimiento.Establecimiento
 import com.moralesjuan.yourticketapp.MapsFragment
-import com.moralesjuan.yourticketapp.InfoCupon.InformacionDelCuponFragment
-import com.moralesjuan.yourticketapp.MyListener
 import com.moralesjuan.yourticketapp.R
-import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_info_establecimientos.view.*
 
 class InfoEstablecimientosFragment(private var nombre_establecimiento: String) : Fragment() {
