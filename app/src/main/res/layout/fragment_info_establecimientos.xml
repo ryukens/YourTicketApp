@@ -45,9 +45,9 @@
 
                 <TextView
                     android:id="@+id/textViewEstablishmentTitle"
-                    android:layout_width="430dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-smallcaps"
+                    android:fontFamily="@font/adamina"
                     android:gravity="center"
                     android:text="@string/textViewEstablishment_text"
                     android:textColor="@android:color/white"
@@ -57,29 +57,36 @@
 
             </LinearLayout>
 
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adViewInfoEstablecimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:adSize="BANNER"
+                app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayoutEstablishment"
+                app:layout_constraintStart_toStartOf="@+id/linearLayoutEstablishment"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutEstablishment" />
+
             <LinearLayout
                 android:id="@+id/linearLayout8"
                 android:layout_width="403dp"
                 android:layout_height="246dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@color/colorPrimaryDark"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayoutEstablishment"
                 app:layout_constraintStart_toStartOf="@+id/linearLayoutEstablishment"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayoutEstablishment">
+                app:layout_constraintTop_toBottomOf="@+id/adViewInfoEstablecimiento">
 
-                <ImageView
-                    android:id="@+id/imageViewMap"
-                    android:layout_width="0dp"
-                    android:layout_height="239dp"
-                    android:layout_weight="1"
-                    android:background="@color/paleta1"
-                    android:contentDescription="@string/imageViewMap_text"
-                    app:srcCompat="@drawable/img_map_city" />
-
-
+                <fragment
+                    android:id="@+id/fragment2"
+                    android:name="com.moralesjuan.yourticketapp.MapsFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -153,4 +160,5 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

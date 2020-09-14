@@ -43,7 +43,7 @@ class RegistroActivity : AppCompatActivity() {
 
                 if (validarEmail(email)) {
 
-                    if (editTextTextPassword.length() > MIN_PASSWORD_LENGTH) {
+                    if (editTextTextPassword.length() >= MIN_PASSWORD_LENGTH) {
                         if (password == confirmPassword) {
 
                             ProcesarUsuario(nombre, apellido, email, password, fechaNacimiento)
