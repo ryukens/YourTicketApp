@@ -1,5 +1,6 @@
 package com.moralesjuan.yourticketapp
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
@@ -10,8 +11,11 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.gms.ads.AdRequest
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_registro.*
+import kotlinx.android.synthetic.main.fragment_perfil.*
 import kotlinx.android.synthetic.main.fragment_perfil.view.*
 import java.util.regex.Pattern
+
 
 class PerfilFragment : Fragment() {
 
@@ -25,6 +29,10 @@ class PerfilFragment : Fragment() {
         var root = inflater.inflate(R.layout.fragment_perfil, container, false)
 
         root = cargarDatosPerfil(root)
+
+        editTextDate.setOnClickListener {
+            showDatePickerDialog()
+        }
 
         root.buttonUpdate.setOnClickListener {
 
@@ -41,7 +49,7 @@ class PerfilFragment : Fragment() {
                 .update("nombre_usuario", root.editTextTextPersonName.text.toString(),
                     "apellido_usuario", root.editTextTextPersonName5.text.toString(),
                     "correo_usuario", root.editTextTextPersonName7.text.toString(),
-                    "fecha_nacimiento", root.editTextTextPersonName8.text.toString())
+                    "fecha_nacimiento", root.editTextDate.text.toString())
                 .addOnSuccessListener {
                     Toast.makeText(this.context, "Data successfully updated", Toast.LENGTH_SHORT).show()
                     PrincipalActivity.Companion.globalVarEmail = root.editTextTextPersonName7.text.toString()
@@ -75,7 +83,7 @@ class PerfilFragment : Fragment() {
                                 root.editTextTextPersonName.setText(documento.data.getValue("nombre_usuario").toString())
                                 root.editTextTextPersonName5.setText(documento.data.getValue("apellido_usuario").toString())
                                 root.editTextTextPersonName7.setText(documento.data.getValue("correo_usuario").toString())
-                                root.editTextTextPersonName8.setText(documento.data.getValue("fecha_nacimiento").toString())
+                                root.editTextDate.setText(documento.data.getValue("fecha_nacimiento").toString())
                             }
                         }
                     }
@@ -85,8 +93,22 @@ class PerfilFragment : Fragment() {
         return root
     }
 
+
     private fun ValidarEmail(email: String): Boolean {
         val pattern: Pattern = Patterns.EMAIL_ADDRESS
         return pattern.matcher(email).matches()
     }
+
+
+    private fun showDatePickerDialog() {
+        val newFragment = DatePickerFragment.newInstance(DatePickerDialog.OnDateSetListener { _, year, month, day ->
+            // +1 because January is zero
+            val selectedDate = day.toString() + " / " + (month + 1) + " / " + year
+            editTextDate.setText(selectedDate)
+        })
+
+        newFragment.show(requireActivity().supportFragmentManager, "datePicker")
+    }
+
+
 }

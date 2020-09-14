@@ -110,15 +110,19 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName8"
+        android:id="@+id/editTextDate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Date"
+        android:hint="dd/mm/yyyy"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="@+id/textView_birthday"
         app:layout_constraintStart_toStartOf="@+id/textView_birthday"
-        app:layout_constraintTop_toBottomOf="@+id/textView_birthday" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_birthday"
+        android:focusable="false"
+        android:clickable="true"
+        android:maxLines="1"
+        />
 
     <Button
         android:id="@+id/buttonUpdate"
