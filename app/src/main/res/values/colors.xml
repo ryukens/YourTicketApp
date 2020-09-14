@@ -7,4 +7,19 @@
     <color name="colorSecundary3">#9288a9</color>
     <color name="colorSecundary4">#fbb6c3</color>
     <color name="colorSecundary5">#250e40</color>
+
+    <color name="colorJuanci">#cffffe</color>
+    <color name="colorJuanci2">#bbe1fa</color>
+    <color name="colorbotones">#79bac1</color>
+    <color name="colorbotones2">#12cad6</color>
+    <color name="colorFondo">#edf7fa</color>
+    <color name="colorProbando">#423144</color>
+    <color name="colorProbando2">#1b1c25</color>
+
+    <color name="paleta1">#1b262c</color>
+    <color name="paleta2">#0f4c75</color>
+    <color name="paleta3">#00b7c2</color>
+    <color name="paleta4">#3282b8</color>
+
+
 </resources>

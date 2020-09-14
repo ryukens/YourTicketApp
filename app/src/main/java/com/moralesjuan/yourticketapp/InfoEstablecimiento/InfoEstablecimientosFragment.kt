@@ -4,20 +4,27 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.bumptech.glide.Glide
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.gms.ads.AdRequest
 import com.google.firebase.firestore.FirebaseFirestore
+import com.moralesjuan.yourticketapp.Cupones.Cupon
+import com.moralesjuan.yourticketapp.Cupones.CuponAdapter
 import com.moralesjuan.yourticketapp.Establecimiento.Establecimiento
-import com.moralesjuan.yourticketapp.InfoCupon.InformacionDelCuponFragment
 import com.moralesjuan.yourticketapp.MapsFragment
+import com.moralesjuan.yourticketapp.InfoCupon.InformacionDelCuponFragment
 import com.moralesjuan.yourticketapp.MyListener
 import com.moralesjuan.yourticketapp.R
 import kotlinx.android.synthetic.*
+import kotlinx.android.synthetic.main.fragment_info_establecimientos.view.*
 
 class InfoEstablecimientosFragment(private var nombre_establecimiento: String) : Fragment() {
+
+    private lateinit var cuponAdapter: CuponAdapter
+    private lateinit var recyclerViewCupon: RecyclerView
+    private var listaCupones = arrayListOf<Cupon>()
 
     private lateinit var fragmentGoogle: Fragment
 
@@ -32,15 +39,8 @@ class InfoEstablecimientosFragment(private var nombre_establecimiento: String) :
         textViewEstName.text = nombre_establecimiento
         cargarInfo(root)
 
-//        val imageView_Cupon1: ImageView = root.findViewById(R.id.imageViewCupon1)
-//        val nuevoFragmento =
-//            InformacionDelCuponFragment()
-//        imageView_Cupon1.setOnClickListener(){
-//            val transaction = requireFragmentManager().beginTransaction()
-//            transaction.add(R.id.fragment_informacion_establecimiento_xml, nuevoFragmento)
-//            transaction.addToBackStack(null)
-//            transaction.commit()
-//        }
+        val adRequest = AdRequest.Builder().build()
+        root.adViewInfoEstablecimiento.loadAd(adRequest)
         fragmentGoogle = MapsFragment(textViewEstName.text as String)
         activity?.supportFragmentManager?.beginTransaction()
             ?.replace(R.id.fragment2,fragmentGoogle)
@@ -64,32 +64,29 @@ class InfoEstablecimientosFragment(private var nombre_establecimiento: String) :
             }
     }
 
-    fun cargarCupon(root: View, establecimiento: Establecimiento) {
-        val imageView_Cupon1: ImageView = root.findViewById(R.id.imageViewCupon1)
-        lateinit var cuponid: String
+    fun cargarCupon(root: View, establecimiento: Establecimiento): View {
+
         val db = FirebaseFirestore.getInstance()
-        db.collection("cupon")
-            .whereEqualTo("establecimiento", establecimiento.nombre_est)
-            .get()
-            .addOnSuccessListener { documents ->
-                for (documento in documents) {
-//                    establecimiento = documento.toObject(Establecimiento::class.java)
-                    cuponid = documento.id
-                    Glide.with(this).load(documento["path_cupon"]).into(imageView_Cupon1)
-                }
-//                Toast.makeText(context, "Cupon leido", Toast.LENGTH_SHORT).show()
-                try {
-                    val nuevoFragmento = InformacionDelCuponFragment(cuponid)
-                    imageView_Cupon1.setOnClickListener() {
-                        val transaction = requireFragmentManager().beginTransaction()
-                        transaction.add(this.id, nuevoFragmento)
-                        transaction.addToBackStack(null)
-                        transaction.commit()
+
+//        try {
+            db.collection("cupon")
+                .whereEqualTo("establecimiento", establecimiento.nombre_est)
+                .get()
+                .addOnSuccessListener { documents ->
+                    for (documento in documents) {
+                        val cupon = documento.toObject(Cupon::class.java)
+                        cupon.id = documento.id
+                        listaCupones.add(cupon)
                     }
-                } catch (e: Exception) {
-                    Toast.makeText(context, "NO HAY CUPONES", Toast.LENGTH_SHORT).show()
+                    cuponAdapter = CuponAdapter(this, listaCupones, R.layout.row_cupon)
+                    recyclerViewCupon = root.findViewById(R.id.recyclerViewCuponEstablecimiento)
+                    recyclerViewCupon.layoutManager = LinearLayoutManager(context)
+                    recyclerViewCupon.adapter = cuponAdapter
                 }
-            }
+//        } catch (e: Exception) {
+//            Toast.makeText(context, "NO HAY CUPONES", Toast.LENGTH_SHORT).show()
+//        }
+            return root
     }
 
 }

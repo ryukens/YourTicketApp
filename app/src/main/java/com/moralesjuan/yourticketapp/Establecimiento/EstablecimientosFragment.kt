@@ -9,8 +9,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.gms.ads.AdRequest
 import com.google.firebase.firestore.FirebaseFirestore
 import com.moralesjuan.yourticketapp.R
+import kotlinx.android.synthetic.main.fragment_categorias.view.*
 
 class EstablecimientosFragment(private var nombre_categoria: String) : Fragment() {
 
@@ -28,6 +30,9 @@ class EstablecimientosFragment(private var nombre_categoria: String) : Fragment(
         val textViewTitulo:TextView = root.findViewById(R.id.textViewCatego)
         textViewTitulo.text = nombre_categoria
         root = cargarLista(root, nombre_categoria)
+
+        val adRequest = AdRequest.Builder().build()
+        root.adViewCategory.loadAd(adRequest)
 
         return root
     }
