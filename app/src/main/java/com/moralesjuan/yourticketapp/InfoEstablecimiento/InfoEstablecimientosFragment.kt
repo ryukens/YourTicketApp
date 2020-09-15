@@ -38,6 +38,7 @@ class InfoEstablecimientosFragment(private var nombre_establecimiento: String) :
 
         val adRequest = AdRequest.Builder().build()
         root.adViewInfoEstablecimiento.loadAd(adRequest)
+
         fragmentGoogle = MapsFragment(textViewEstName.text as String)
         activity?.supportFragmentManager?.beginTransaction()
             ?.replace(R.id.fragment2,fragmentGoogle)

@@ -1,11 +1,16 @@
 package com.moralesjuan.yourticketapp
 
+import android.graphics.Bitmap
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.CustomTarget
+import com.bumptech.glide.request.transition.Transition
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
@@ -14,7 +19,6 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.firebase.firestore.FirebaseFirestore
-import com.moralesjuan.yourticketapp.MapsFragment
 
 
 class MapsFragment(private var nombre_establecimiento: String="") : Fragment() {
@@ -34,7 +38,7 @@ class MapsFragment(private var nombre_establecimiento: String="") : Fragment() {
                                 MarkerOptions()
                                     .position(LatLng(ubicacion.substringBefore(";").toDouble(),ubicacion.substringAfter(";").toDouble()))
                                     .icon(getIcono(documento["categoria_est"].toString()))
-                                    .anchor(0.1f,0.1f)
+                                    .anchor(0.05f,0.05f)
                             )
                         }
                     }
@@ -56,7 +60,6 @@ class MapsFragment(private var nombre_establecimiento: String="") : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
-        Toast.makeText(context, nombre_establecimiento, Toast.LENGTH_SHORT).show()
         mapFragment?.getMapAsync(callback)
 
     }
@@ -67,7 +70,13 @@ class MapsFragment(private var nombre_establecimiento: String="") : Fragment() {
         }else if(categoria == "Car"){
             return BitmapDescriptorFactory.fromResource(R.drawable.car)
         }else if(categoria == "Clothes"){
-            return BitmapDescriptorFactory.fromResource(R.drawable.cloth)
+            return BitmapDescriptorFactory.fromResource(R.drawable.clothes)
+        }else if(categoria == "Shoes"){
+            return BitmapDescriptorFactory.fromResource(R.drawable.shoe)
+        }else if(categoria == "Jeans"){
+            return BitmapDescriptorFactory.fromResource(R.drawable.jean)
+        }else if(categoria == "Desserts") {
+            return BitmapDescriptorFactory.fromResource(R.drawable.dessert)
         }else
             return BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)
         return null
