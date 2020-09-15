@@ -21,10 +21,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView_Cat_Cine"
+        android:id="@+id/imageView_Profile"
         android:layout_width="175dp"
         android:layout_height="148dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/imageView_Profile_content_description"
         android:src="@drawable/ic_profile"
         app:layout_constraintEnd_toEndOf="@+id/adViewPerfil"
         app:layout_constraintStart_toStartOf="@+id/adViewPerfil"
@@ -37,19 +38,19 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
-        android:text="Name"
+        android:text="@string/textView_name"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_Cat_Cine" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_Profile" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextProfileName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz"
         android:ems="10"
-        android:hint="First Name"
+        android:hint="@string/editTextProfileName_hint"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/textView_name"
         app:layout_constraintStart_toStartOf="@+id/textView_name"
@@ -59,19 +60,19 @@
         android:id="@+id/textView_lastname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="LastName"
+        android:text="@string/textView_lastname_text"
         android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextProfileName"
+        app:layout_constraintStart_toStartOf="@+id/editTextProfileName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextProfileName" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/editTextProfileLastname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz"
         android:ems="10"
-        android:hint="Last Name"
+        android:hint="@string/editTextProfileLastname_hint"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/textView_lastname"
         app:layout_constraintHorizontal_bias="1.0"
@@ -82,18 +83,18 @@
         android:id="@+id/textView_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="@string/textView_email_text"
         android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName5"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName5"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextProfileLastname"
+        app:layout_constraintStart_toStartOf="@+id/editTextProfileLastname"
+        app:layout_constraintTop_toBottomOf="@+id/editTextProfileLastname" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/editTextProfileEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/editTextProfileEmail_hint"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="@+id/textView_email"
         app:layout_constraintStart_toStartOf="@+id/textView_email"
@@ -103,26 +104,25 @@
         android:id="@+id/textView_birthday"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Birthday"
+        android:text="@string/textView_birthday_text"
         android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName7"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName7"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextProfileEmail"
+        app:layout_constraintStart_toStartOf="@+id/editTextProfileEmail"
+        app:layout_constraintTop_toBottomOf="@+id/editTextProfileEmail" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/editTextProfileDate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="dd/mm/yyyy"
-        android:inputType="date"
+        android:hint="@string/editTextProfileDate_hint"
+        android:inputType="text|date"
         app:layout_constraintEnd_toEndOf="@+id/textView_birthday"
         app:layout_constraintStart_toStartOf="@+id/textView_birthday"
         app:layout_constraintTop_toBottomOf="@+id/textView_birthday"
-        android:focusable="false"
+
         android:clickable="true"
-        android:maxLines="1"
-        />
+        android:maxLines="1"/>
 
     <Button
         android:id="@+id/buttonUpdate"
