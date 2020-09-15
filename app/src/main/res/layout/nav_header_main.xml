@@ -18,9 +18,10 @@
         android:layout_height="98dp"
         android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@drawable/ic_ticket" />
+        app:srcCompat="@drawable/logo" />
 
     <TextView
+        android:id="@+id/textViewNavHeaderTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/toontii"
@@ -29,7 +30,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
-        android:id="@+id/textViewCoupon"
+        android:id="@+id/textViewRegisterName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/toontii"

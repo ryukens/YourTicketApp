@@ -1,5 +1,6 @@
 package com.moralesjuan.yourticketapp
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -24,6 +25,10 @@ class RegistroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
+
+        editTextDateBirth.setOnClickListener {
+            showDatePickerDialog()
+        }
 
         buttonSingIn.setOnClickListener() {
 
@@ -107,21 +112,30 @@ class RegistroActivity : AppCompatActivity() {
                                 .addOnSuccessListener { documentReference ->
                                     Log.d("Info", "DocumentSnapshot written with ID: ${documentReference.id}")
                                     idDocumentReference = documentReference.id
+                                    val i = Intent(this@RegistroActivity, PrincipalActivity::class.java)
+                                    i.putExtra(EXTRA_ID, idDocumentReference)
+                                    i.putExtra(EXTRA_EMAIL, email)
+                                    startActivity(i)
                                 }
                                 .addOnFailureListener { e ->
                                     Log.w("Error", "Error adding document", e)
                                     Toast.makeText(this, "Error reading from database", Toast.LENGTH_SHORT).show()
                                 }
-
-                            val i = Intent(this@RegistroActivity, PrincipalActivity::class.java)
-                            i.putExtra(EXTRA_ID, idDocumentReference)
-                            i.putExtra(EXTRA_EMAIL, email)
-                            startActivity(i)
                         }else{
                             Toast.makeText(this, "This user already exists", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }
             }
+    }
+
+    private fun showDatePickerDialog() {
+        val newFragment = DatePickerFragment.newInstance(DatePickerDialog.OnDateSetListener { _, year, month, day ->
+            // +1 because January is zero
+            val selectedDate = day.toString() + " / " + (month + 1) + " / " + year
+            editTextDateBirth.setText(selectedDate)
+        })
+
+        newFragment.show(supportFragmentManager, "datePicker")
     }
 }

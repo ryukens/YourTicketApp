@@ -47,7 +47,6 @@ class EstablecimientosFragment(private var nombre_categoria: String) : Fragment(
                     val establecimiento = documento.toObject(Establecimiento::class.java)
                     listaEstablecimientos.add(establecimiento)
                 }
-//                Toast.makeText(context, "Base de datos leida", Toast.LENGTH_SHORT).show()
 
                 establecimientoAdapter =
                     EstablecimientoAdapter(this, listaEstablecimientos, R.layout.row_categoria)

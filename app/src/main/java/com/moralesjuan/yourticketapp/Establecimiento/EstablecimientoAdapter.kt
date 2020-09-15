@@ -56,7 +56,7 @@ class EstablecimientoAdapter(
         val nuevoFragmento = InfoEstablecimientosFragment(nombre_establecimiento)
         imagen.setOnClickListener() {
             val transaction = fragmento.requireFragmentManager().beginTransaction()
-            transaction.add(fragmento.id, nuevoFragmento)
+            transaction.replace(fragmento.id, nuevoFragmento)
             transaction.addToBackStack(null)
             transaction.commit()
         }

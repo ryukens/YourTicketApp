@@ -84,7 +84,7 @@
                 <fragment
                     android:id="@+id/fragment2"
                     android:name="com.moralesjuan.yourticketapp.MapsFragment"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1" />
             </LinearLayout>
@@ -96,67 +96,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout8" />
-<!--            <LinearLayout-->
-<!--                android:id="@+id/linearLayoutCupones"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:background="@color/colorPrimaryDark"-->
-<!--                android:orientation="horizontal"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="@+id/linearLayout8"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/linearLayout8"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/linearLayout8">-->
 
-<!--            </LinearLayout>-->
-
-
-<!--            <LinearLayout-->
-<!--                android:id="@+id/linearLayout2"-->
-<!--                android:layout_width="220dp"-->
-<!--                android:layout_height="220dp"-->
-<!--                android:background="@color/colorPrimaryDark"-->
-<!--                android:orientation="vertical"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/linearLayout8"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/linearLayout8">-->
-
-<!--&lt;!&ndash;                <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:id="@+id/textViewCupon1"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:text="@string/textViewEstablishmentCupon_text"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:textSize="18sp"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:textStyle="bold"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:background="@color/paleta4"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:textColor="@color/colorJuanci"&ndash;&gt;-->
-<!--&lt;!&ndash;                    />&ndash;&gt;-->
-
-<!--&lt;!&ndash;                <ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:id="@+id/imageViewCupon1"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:contentDescription="@string/imageViewCupon_text"&ndash;&gt;-->
-<!--&lt;!&ndash;                    app:srcCompat="@drawable/img_cupon"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:background="@color/colorProbando"&ndash;&gt;-->
-<!--&lt;!&ndash;                    />&ndash;&gt;-->
-<!--            </LinearLayout>-->
-
-
-
-<!--            <LinearLayout-->
-<!--                android:id="@+id/linearLayout4"-->
-<!--                android:layout_width="397dp"-->
-<!--                android:layout_height="65dp"-->
-<!--                android:background="@color/colorPrimaryDark"-->
-<!--                android:orientation="vertical"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">-->
-
-<!--               -->
-
-
-<!--            </LinearLayout>-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

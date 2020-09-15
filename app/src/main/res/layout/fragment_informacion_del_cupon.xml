@@ -33,29 +33,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <Button
-                    android:id="@+id/buttonBackCoupon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/buttonBack_text"
-                    android:textColor="@android:color/black"
-                    android:background="@color/colorbotones2"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
                 <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/textViewCoupon"
-                    android:layout_width="350dp"
-                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:fontFamily="@font/adamina"
-                    android:gravity="center"
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    tools:text="@string/textViewCoupon_text" />
+                    android:text="@string/textViewCoupon_text" />
+
             </LinearLayout>
 
             <com.google.android.gms.ads.AdView
@@ -271,25 +260,6 @@
                     android:text="@string/buttonSaveCupon_text"
                     android:textColor="@android:color/white" />
             </LinearLayout>
-
-            <!--            <LinearLayout-->
-            <!--                android:id="@+id/linearLayoutRemoveFromSaved"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="match_parent"-->
-            <!--                android:background="@android:color/darker_gray"-->
-            <!--                android:orientation="vertical"-->
-            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--                app:layout_constraintEnd_toEndOf="@+id/linearLayoutSave"-->
-            <!--                app:layout_constraintStart_toStartOf="@+id/linearLayoutSave"-->
-            <!--                app:layout_constraintTop_toBottomOf="@+id/linearLayout6"-->
-            <!--                tools:visibility="gone">-->
-
-            <!--                <Button-->
-            <!--                    android:id="@+id/buttonRemoveFromSaved"-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:text="@string/buttonRemoveFromSaved_text" />-->
-            <!--            </LinearLayout>-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

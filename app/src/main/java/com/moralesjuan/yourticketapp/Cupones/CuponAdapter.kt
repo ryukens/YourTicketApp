@@ -28,7 +28,7 @@ class CuponAdapter (
         viewType: Int
     ): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(layout, parent, false)
-        //Toast.makeText(parent.context, "entra aca", Toast.LENGTH_LONG).show()
+
         return ViewHolder(v)
     }
 
@@ -41,7 +41,6 @@ class CuponAdapter (
         Glide.with(holder.itemView.context).load(lista_cupones[position].path_cupon)
             .into(imagen)
         cargarInfoCupones(imagen, lista_cupones[position].id)
-
     }
 
     override fun getItemCount(): Int {
@@ -64,7 +63,7 @@ class CuponAdapter (
         val nuevoFragmento = InformacionDelCuponFragment(cuponID)
         imagen.setOnClickListener() {
             val transaction = fragmento.requireFragmentManager().beginTransaction()
-            transaction.add(fragmento.id, nuevoFragmento)
+            transaction.replace(fragmento.id, nuevoFragmento)
             transaction.addToBackStack(null)
             transaction.commit()
         }
