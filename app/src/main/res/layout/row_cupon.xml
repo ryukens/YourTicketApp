@@ -24,6 +24,7 @@
         android:id="@+id/imageView_imagen_cupon"
         android:layout_width="0dp"
         android:layout_height="228dp"
+        android:contentDescription="@string/imageView_imagen_cupon_content_description"
         android:src="@drawable/img_cupon3"
         app:layout_constraintEnd_toEndOf="@+id/textView_titulo_cupon"
         app:layout_constraintStart_toStartOf="@+id/textView_titulo_cupon"
