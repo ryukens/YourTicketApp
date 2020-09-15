@@ -38,6 +38,7 @@ class InfoEstablecimientosFragment(private var nombre_establecimiento: String) :
 
         val adRequest = AdRequest.Builder().build()
         root.adViewInfoEstablecimiento.loadAd(adRequest)
+
         fragmentGoogle = MapsFragment(textViewEstName.text as String)
         activity?.supportFragmentManager?.beginTransaction()
             ?.replace(R.id.fragment2,fragmentGoogle)
@@ -55,7 +56,6 @@ class InfoEstablecimientosFragment(private var nombre_establecimiento: String) :
                 for (documento in documents) {
                     establecimiento = documento.toObject(Establecimiento::class.java)
                 }
-//                Toast.makeText(context, "Base de datos leida", Toast.LENGTH_SHORT).show()
 
                 cargarCupon(root, establecimiento)
             }
@@ -65,7 +65,6 @@ class InfoEstablecimientosFragment(private var nombre_establecimiento: String) :
 
         val db = FirebaseFirestore.getInstance()
 
-//        try {
             db.collection("cupon")
                 .whereEqualTo("establecimiento", establecimiento.nombre_est)
                 .get()
@@ -80,10 +79,6 @@ class InfoEstablecimientosFragment(private var nombre_establecimiento: String) :
                     recyclerViewCupon.layoutManager = LinearLayoutManager(context)
                     recyclerViewCupon.adapter = cuponAdapter
                 }
-//        } catch (e: Exception) {
-//            Toast.makeText(context, "NO HAY CUPONES", Toast.LENGTH_SHORT).show()
-//        }
             return root
     }
-
 }

@@ -59,16 +59,12 @@ class LoginActivity : AppCompatActivity() {
                         }
                     }
             }
-
         }
 
         button_Google.setOnClickListener() {
             startActivity(Intent(this, RegistroActivity::class.java))
         }
 
-        button_registrarse.setOnClickListener() {
-            startActivity(Intent(this, RegistroActivity::class.java))
-        }
     }
 
     fun InicializarArchivoDePreferencias(){

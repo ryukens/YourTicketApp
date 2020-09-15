@@ -23,7 +23,7 @@ class CategoriaAdapter(
         viewType: Int
     ): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(layout, parent, false)
-        //Toast.makeText(parent.context, "entra aca", Toast.LENGTH_LONG).show()
+
         return ViewHolder(v)
     }
 
@@ -32,14 +32,10 @@ class CategoriaAdapter(
         position: Int
     ) {
         holder.nombre_categoria.text = lista_categorias[position].nombre_cat
-        //holder.imagen_categoria.setImageResource(R.drawable.img_cine)
         var imagen = holder.itemView.findViewById<ImageView>(R.id.imageView_imagen)
         Glide.with(holder.itemView.context).load(lista_categorias[position].path_imagen)
             .into(imagen)
         cargarEstablecimiento(imagen, holder.nombre_categoria.text.toString())
-
-//        val ejemplo_categoria = holder.itemView.findViewById<ImageView>(R.id.ejemplo_categoria)
-//        holder.imageViewCategoria.setImageResource(R.drawable.img_ropa)
     }
 
     override fun getItemCount(): Int {
@@ -62,7 +58,7 @@ class CategoriaAdapter(
         val nuevoFragmento = EstablecimientosFragment(nombre_categoria)
         imagen.setOnClickListener() {
             val transaction = fragmento.requireFragmentManager().beginTransaction()
-            transaction.add(fragmento.id, nuevoFragmento)
+            transaction.replace(fragmento.id, nuevoFragmento)
             transaction.addToBackStack(null)
             transaction.commit()
         }

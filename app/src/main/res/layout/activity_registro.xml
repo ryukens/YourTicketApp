@@ -13,6 +13,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="2dp"
         android:layout_marginEnd="2dp"
+        android:contentDescription="@string/imageView_Cat_Ropa_content_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,42 +21,42 @@
 
 
     <TextView
-        android:id="@+id/textViewCoupon"
+        android:id="@+id/textViewRegisterName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/toontii"
-        android:text="Name:"
+        android:text="@string/textViewRegisterName_text"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_Cat_Ropa" />
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewRegisterLastname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/toontii"
-        android:text="Lastname:"
+        android:text="@string/textViewRegisterLastname_text"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/editTextName"
         app:layout_constraintTop_toBottomOf="@+id/editTextName" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewRegisterEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/toontii"
-        android:text="Email:"
+        android:text="@string/textViewRegisterEmail_text"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/editTextTextLastname"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextLastname" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewRegisterPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -66,47 +67,58 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmail" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textViewRegisterConfirmPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/toontii"
-        android:text="Confirm Password:"
+        android:text="@string/textViewRegisterConfirmPassword_text"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
+    <TextView
+        android:id="@+id/textViewRegisterBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/toontii"
+        android:text="@string/textViewRegisterBirth_text"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPasswordConfirm"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPasswordConfirm" />
+
     <EditText
         android:id="@+id/editTextName"
-        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz"
         android:ems="10"
-        android:hint="Name"
+        android:hint="@string/editTextName_hint"
         android:inputType="textPersonName"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewCoupon"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCoupon" />
+        app:layout_constraintStart_toStartOf="@+id/textViewRegisterName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegisterName" />
 
     <EditText
         android:id="@+id/editTextTextLastname"
-        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz"
         android:ems="10"
-        android:hint="Lastname"
+        android:hint="@string/editTextTextLastname_hint"
         android:inputType="textPersonName"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintStart_toStartOf="@+id/textViewRegisterLastname"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegisterLastname" />
 
     <EditText
         android:id="@+id/editTextTextEmail"
@@ -115,13 +127,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Email"
-        android:inputType="textPersonName"
+        android:hint="@string/editTextTextEmail_hint"
+        android:inputType="textEmailAddress"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="@+id/textViewRegisterEmail"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegisterEmail" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
@@ -130,12 +142,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/editTextTextPassword_hint"
         android:inputType="textPassword"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintStart_toStartOf="@+id/textViewRegisterPassword"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegisterPassword" />
 
     <EditText
         android:id="@+id/editTextTextPasswordConfirm"
@@ -144,23 +156,29 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/editTextTextPasswordConfirm_hint"
         android:inputType="textPassword"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintStart_toStartOf="@+id/textViewRegisterConfirmPassword"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegisterConfirmPassword" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/toontii"
-        android:text="Date of birth:"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPasswordConfirm"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPasswordConfirm" />
+    <EditText
+        android:id="@+id/editTextDateBirth"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="@string/editTextDateBirth_hint"
+        android:inputType="date"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewRegisterBirth"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegisterBirth"
+        android:focusable="false"
+        android:clickable="true"
+        android:maxLines="1"/>
 
     <Button
         android:id="@+id/buttonSingIn"
@@ -177,26 +195,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDateBirth"/>
-
-    <EditText
-        android:id="@+id/editTextDateBirth"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="dd/mm/yyyy"
-        android:inputType="date"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        android:focusable="false"
-        android:clickable="true"
-        android:maxLines="1"
-        />
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

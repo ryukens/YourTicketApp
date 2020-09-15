@@ -47,7 +47,7 @@ class InicioFragment : Fragment() {
                     cupon.id = documento.id
                     listaCupones.add(cupon)
                 }
-//                Toast.makeText(context, "Base de datos leida", Toast.LENGTH_SHORT).show()
+
                 cuponAdapter = CuponAdapter(this, listaCupones, R.layout.row_cupon)
                 recyclerViewCupon = root.findViewById(R.id.recyclerViewCupon)
                 recyclerViewCupon.layoutManager = LinearLayoutManager(context)

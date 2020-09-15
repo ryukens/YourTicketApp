@@ -112,16 +112,15 @@ class RegistroActivity : AppCompatActivity() {
                                 .addOnSuccessListener { documentReference ->
                                     Log.d("Info", "DocumentSnapshot written with ID: ${documentReference.id}")
                                     idDocumentReference = documentReference.id
+                                    val i = Intent(this@RegistroActivity, PrincipalActivity::class.java)
+                                    i.putExtra(EXTRA_ID, idDocumentReference)
+                                    i.putExtra(EXTRA_EMAIL, email)
+                                    startActivity(i)
                                 }
                                 .addOnFailureListener { e ->
                                     Log.w("Error", "Error adding document", e)
                                     Toast.makeText(this, "Error reading from database", Toast.LENGTH_SHORT).show()
                                 }
-
-                            val i = Intent(this@RegistroActivity, PrincipalActivity::class.java)
-                            i.putExtra(EXTRA_ID, idDocumentReference)
-                            i.putExtra(EXTRA_EMAIL, email)
-                            startActivity(i)
                         }else{
                             Toast.makeText(this, "This user already exists", Toast.LENGTH_SHORT).show()
                         }
