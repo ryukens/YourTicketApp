@@ -28,7 +28,7 @@
     <string name="imageViewMap_text">Map</string>
     <string name="textViewEstablishmentCupon_text">Coupon:</string>
     <string name="imageViewCupon_text">Coupon</string>
-    <string name="registrase_con_google">Register with Google</string>
+    <string name="registrase">Register</string>
     <string name="email">Email:</string>
     <string name="forgot_your_password">Forgot your password?</string>
     <string name="sing_in">Sign In</string>

@@ -66,9 +66,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this, RegistroActivity::class.java))
         }
 
-        button_registrarse.setOnClickListener() {
-            startActivity(Intent(this, RegistroActivity::class.java))
-        }
     }
 
     fun InicializarArchivoDePreferencias(){
