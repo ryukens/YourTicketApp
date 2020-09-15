@@ -1,5 +1,6 @@
 package com.moralesjuan.yourticketapp
 
+import android.app.DatePickerDialog.OnDateSetListener
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
@@ -10,13 +11,16 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.gms.ads.AdRequest
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_registro.*
+import kotlinx.android.synthetic.main.fragment_perfil.*
 import kotlinx.android.synthetic.main.fragment_perfil.view.*
+import kotlinx.android.synthetic.main.fragment_perfil.view.editTextProfileDate
 import java.util.regex.Pattern
+
 
 class PerfilFragment : Fragment() {
 
     override fun onCreateView(
-
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -88,4 +92,6 @@ class PerfilFragment : Fragment() {
         val pattern: Pattern = Patterns.EMAIL_ADDRESS
         return pattern.matcher(email).matches()
     }
+
+
 }

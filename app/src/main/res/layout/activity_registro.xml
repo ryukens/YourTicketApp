@@ -175,7 +175,10 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textViewRegisterBirth"
-        app:layout_constraintTop_toBottomOf="@+id/textViewRegisterBirth" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegisterBirth"
+        android:focusable="false"
+        android:clickable="true"
+        android:maxLines="1"/>
 
     <Button
         android:id="@+id/buttonSingIn"
@@ -192,6 +195,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDateBirth"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
