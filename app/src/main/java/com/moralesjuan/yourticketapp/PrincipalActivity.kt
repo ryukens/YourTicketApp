@@ -1,20 +1,31 @@
 package com.moralesjuan.yourticketapp
 
+
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
-import com.google.android.material.navigation.NavigationView
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
+import com.google.android.gms.ads.MobileAds
+import com.google.android.material.navigation.NavigationView
 import androidx.navigation.ui.AppBarConfiguration as AppBarConfiguration1
+
 
 class PrincipalActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration1
+
+    companion object {
+        var globalVarId = ""
+        var globalVarEmail = ""
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,11 +33,11 @@ class PrincipalActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-//        val fab: FloatingActionButton = findViewById(R.id.fab)
-//        fab.setOnClickListener { view ->
-//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                .setAction("Action", null).show()
-//        }
+        MobileAds.initialize(this){}
+
+        PrincipalActivity.Companion.globalVarId = intent.getStringExtra(EXTRA_ID).toString()
+        PrincipalActivity.Companion.globalVarEmail = intent.getStringExtra(EXTRA_EMAIL).toString()
+
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
@@ -39,6 +50,10 @@ class PrincipalActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        navView.menu.findItem(R.id.nav_log_out).setOnMenuItemClickListener {
+            logOut()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -50,5 +65,24 @@ class PrincipalActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    override fun onBackPressed() {
+        val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START)
+        } else {
+            if (supportFragmentManager.backStackEntryCount > 1) {
+                supportFragmentManager.popBackStack()
+            } else {
+                super.onBackPressed()
+            }
+        }
+    }
+
+    fun logOut() : Boolean {
+        startActivity(Intent(this, LoginActivity::class.java))
+        finish()
+        return true
     }
 }

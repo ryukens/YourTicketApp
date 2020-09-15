@@ -21,20 +21,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/buttonBackCoupon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:text="@string/buttonBack_text"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
         <TextView
             android:id="@+id/textViewCatego"
-            android:layout_width="350dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/adamina"
@@ -46,6 +35,18 @@
 
     </LinearLayout>
 
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout8"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewCategoria"
         android:layout_width="0dp"
@@ -55,8 +56,7 @@
         app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/linearLayout8"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
-        app:layout_constraintVertical_bias="0.496" />
+        app:layout_constraintTop_toBottomOf="@+id/adViewCategory" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

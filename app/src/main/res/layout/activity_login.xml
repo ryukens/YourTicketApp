@@ -5,7 +5,7 @@
     android:id="@+id/activity_login_xml"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/fondo"
     tools:context=".LoginActivity">
 
     <Button
@@ -15,21 +15,26 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/registrase_con_google"
+        android:background="@drawable/bordes_redondos"
+        android:fontFamily="@font/adamina"
+        android:text="@string/registrase"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/tVEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="@font/toontii"
         android:text="@string/email"
-        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/button_Google"
         app:layout_constraintTop_toBottomOf="@+id/button_Google" />
 
@@ -38,6 +43,7 @@
         android:layout_width="313dp"
         android:layout_height="45dp"
         android:layout_marginEnd="16dp"
+        android:background="@color/colorPrimary"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textPersonName"
@@ -51,8 +57,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="@font/toontii"
         android:text="@string/passwordOption"
-        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/editTextEmail"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
@@ -61,10 +70,10 @@
         android:layout_width="313dp"
         android:layout_height="44dp"
         android:autofillHints=""
-        android:password="true"
+        android:background="@color/colorPrimary"
         android:ems="10"
         android:hint="@string/password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/editTextEmail"
         app:layout_constraintStart_toStartOf="@+id/tVPassword"
         app:layout_constraintTop_toBottomOf="@+id/tVPassword" />
@@ -74,8 +83,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
+        android:background="@color/colorPrimaryDark"
         android:checked="true"
+        android:fontFamily="@font/toontii"
         android:text="@string/checkBoxRemember_text"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
@@ -86,47 +98,14 @@
         android:layout_width="358dp"
         android:layout_height="180dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="4dp"
         android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-        app:srcCompat="@drawable/ic_ticket" />
-
-    <Button
-        android:id="@+id/buttonRestartPassword"
-        android:layout_width="201dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="24dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/forgot_your_password"
-        android:textColor="@android:color/white"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/button_Login"
-        app:layout_constraintTop_toBottomOf="@+id/button_Login"
-        app:layout_constraintVertical_bias="0.204" />
-
-    <Button
-        android:id="@+id/button_registrarse"
-        android:layout_width="62dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="24dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/sing_in"
-        android:textColor="@android:color/white"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button_Login"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/buttonRestartPassword"
-        app:layout_constraintTop_toBottomOf="@+id/button_Login"
-        app:layout_constraintVertical_bias="0.204" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxRemember"
+        app:srcCompat="@mipmap/ic_index" />
 
     <Button
         android:id="@+id/button_Login"
@@ -135,10 +114,11 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="16dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/bordes_redondos"
+        android:fontFamily="@font/toontii"
         android:text="@string/login"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
