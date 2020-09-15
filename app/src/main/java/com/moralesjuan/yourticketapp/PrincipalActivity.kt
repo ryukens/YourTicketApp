@@ -4,11 +4,10 @@ package com.moralesjuan.yourticketapp
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuItem
-import android.widget.Toast
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.view.get
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.navigateUp
@@ -68,9 +67,21 @@ class PrincipalActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
+    override fun onBackPressed() {
+        val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START)
+        } else {
+            if (supportFragmentManager.backStackEntryCount > 1) {
+                supportFragmentManager.popBackStack()
+            } else {
+                super.onBackPressed()
+            }
+        }
+    }
+
     fun logOut() : Boolean {
-        //Toast.makeText(this, "Log Out", Toast.LENGTH_SHORT).show();
-        startActivity (Intent(this, LoginActivity::class.java))
+        startActivity(Intent(this, LoginActivity::class.java))
         finish()
         return true
     }

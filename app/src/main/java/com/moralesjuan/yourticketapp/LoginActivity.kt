@@ -59,7 +59,6 @@ class LoginActivity : AppCompatActivity() {
                         }
                     }
             }
-
         }
 
         button_Google.setOnClickListener() {

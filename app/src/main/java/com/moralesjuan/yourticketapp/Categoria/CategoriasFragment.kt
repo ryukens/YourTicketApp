@@ -43,7 +43,6 @@ class CategoriasFragment : Fragment() {
                     val categoria = documento.toObject(Categoria::class.java)
                     listaCategorias.add(categoria)
                 }
-//                Toast.makeText(context, "Base de datos leida", Toast.LENGTH_SHORT).show()
 
                 categoriaAdapter = CategoriaAdapter(this, listaCategorias, R.layout.row_categoria)
                 recyclerViewCategoria = root.findViewById(R.id.recyclerViewCategoria)

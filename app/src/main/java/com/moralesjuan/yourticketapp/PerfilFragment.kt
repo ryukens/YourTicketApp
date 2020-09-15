@@ -51,7 +51,6 @@ class PerfilFragment : Fragment() {
                     Toast.makeText(this.context, "Error updating data", Toast.LENGTH_SHORT).show()
                     Log.w("Error", "Error updating document", e)
                 }
-
         }
 
         val adRequest = AdRequest.Builder().build()
